@@ -1,0 +1,31 @@
+
+
+<%= link_to 'Logout', users_new_user_path %>
+
+
+<%= form_with url: urls_convert_url_path do |form| %>
+  <p>
+    <center>
+      
+      <%= form.label :full_url %>
+      <%= form.text_field :long %>
+
+
+     <%= form.submit 'Long to Short'%><br>
+
+      <%= form.label :short_url %>
+      <%= form.text_field :short %>
+
+    
+    
+    <%= form.submit 'Short to Long'%><br>
+
+    <% pika = params[:commit] %>
+    
+
+    <%= form.label :long_op ,"#{pika}" %><br>
+
+    
+    </center>
+  </p>
+<% end %>

@@ -1,0 +1,39 @@
+<%= form_with url: users_signup_entry_path do |form| %>
+
+  <h1>
+    <center>
+        SignUp
+    </center>
+    
+  </h1>
+  <!-- <p>
+    <% if @a == 5 %>
+  <%= javascript_tag "alert('hello welcome')" %>
+<% end %>
+  </p> -->
+  <p>
+  	<center>
+  		<%= form.label :fullname %>
+    	<%= form.text_field :fullname %><br>
+
+    	<%= form.label :email %>
+    	<%= form.text_field :email %><br>
+
+    	<%= form.label :username %>
+    	<%= form.text_field :username %><br>
+
+    	<%= form.label :password %>
+    	<%= form.text_field :password %><br>
+
+    	<%= form.submit 'signup' %>
+    </center>
+  </p>
+     
+  <p>
+
+    
+
+
+  </p>
+  <%= link_to 'back', users_new_user_path %>
+<% end %>

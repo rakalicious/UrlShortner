@@ -1,0 +1,34 @@
+<%= form_with url: users_login_path do |form| %>
+
+  <h1>
+    <center>
+        Url Shortner
+    </center>
+    
+  </h1>
+  <!-- <p>
+    <% if @a == 5 %>
+  <%= javascript_tag "alert('hello welcome')" %>
+<% end %>
+  </p> -->
+  <p>
+    <center>
+
+
+      <%= form.label :username %>
+      <%= form.text_field :username %><br>
+
+      <%= form.label :password %>
+      <%= form.text_field :password %><br>
+    
+      <%= form.submit 'Login'%>
+
+      <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>"><%= value %></div>
+    <% end %>
+    <%= yield %>
+
+    </center>
+  </p>
+  <%= link_to 'Signup', users_signup_path %>
+<% end %>
