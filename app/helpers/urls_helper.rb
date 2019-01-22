@@ -1,12 +1,17 @@
 module UrlsHelper
 	def new_long_incoming(long_url)
+		#Rails.cache.clear
 		if Url.find_by(long_url: long_url) == nil
 			 @urls = Url.new({:long_url => long_url, :short_url => convert_to_short})
 			 @urls.save
 			 puts "hey"
 			 return Url.find_by(long_url: long_url).short_url
 		else
-			return Url.find_by(long_url: long_url).short_url
+			@short_url = Rails.cache.fetch(long_url , :expires_in => 5.minutes) do
+
+				Url.where(long_url: long_url).first.short_url
+				end
+			return @short_url
 			#render json: {"h" : "hello"}
 		end
 	end
