@@ -5,6 +5,7 @@ class UrlsController < ApplicationController
 	end
 
 	def convert_url
+		
 		puts params
 		if params[:commit] == 'Long to Short'
 			params[:commit] = new_long_incoming(params[:long])

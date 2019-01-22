@@ -10,4 +10,7 @@ Rails.application.routes.draw do
   post 'urls/convert_url'
 
   root 'users#new_user'
+
+  require 'sidekiq/web'	
+mount Sidekiq::Web, :at => '/sidekiq'
 end
