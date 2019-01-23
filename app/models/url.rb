@@ -12,7 +12,14 @@ class Url < ApplicationRecord
 	def self.new_long_incoming(long_url ,dom_short , number)
 		#Rails.cache.clear
 		if Url.find_by(long_url: long_url) == nil
-			 @urls = Url.new({:long_url => long_url, :short_url => UrlsHelper.convert_to_short(number) , :short_domain => dom_short})
+			temp_converted = UrlsHelper.convert_to_short(number)
+			while Url.find_by(short_url: temp_converted) != null do
+				temp_converted = UrlsHelper.convert_to_short(number)
+			end
+
+
+
+			 @urls = Url.new({:long_url => long_url, :short_url => temp_converted , :short_domain => dom_short})
 			 @urls.save
 			 return Url.find_by(long_url: long_url).short_url
 		else
@@ -28,6 +35,13 @@ class Url < ApplicationRecord
 	def self.new_domain_incoming(long_domain , number)
 		#Rails.cache.clear
 		if Domain.find_by(domain_name: long_domain) == nil
+			temp_converted = UrlsHelper.convert_to_short(number)
+			while Domain.find_by(short_domain: temp_converted) != null do
+				temp_converted = UrlsHelper.convert_to_short(number)
+			end
+
+
+
 			 @domains = Domain.new({:domain_name => long_domain, :short_domain => UrlsHelper.convert_to_short(number)})
 			 @domains.save
 			 return Domain.find_by(domain_name: long_domain).short_domain

@@ -10,7 +10,7 @@ module UrlsHelper
 	end
 
 	
-	def self.convert_to_short(number)
+	def self.convert_to_short(number) 
 		charset = Array('A'..'Z') + Array('a'..'z') + Array('0'..'9')
   		return Array.new(number) { charset.sample }.join
 
