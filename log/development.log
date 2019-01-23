@@ -4442,3 +4442,216 @@ Processing by UrlsController#convert_short as HTML
 Completed 200 OK in 13ms (Views: 7.4ms | ActiveRecord: 1.2ms)
 
 
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2019-01-23 11:50:44 +0530
+Processing by UsersController#new_user as HTML
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2019-01-23 11:50:50 +0530
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ciaO8vJ8N4bavh6JJU14tJavBwiMcACmYtBjm16SekAT0JzekD9jSnBf+tTXq+KUwSWtEcE7/w1XPPYibHm66A==", "username"=>"raka", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "raka"], ["LIMIT", 1]]
+  ↳ app/helpers/users_helper.rb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "raka"], ["LIMIT", 1]]
+  ↳ app/helpers/users_helper.rb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "raka"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 56ms (ActiveRecord: 8.4ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-23 11:50:50 +0530
+Processing by UrlsController#new as HTML
+  [1m[36mConversion Load (1.1ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-23"], ["LIMIT", 1]]
+  ↳ app/controllers/urls_controller.rb:6
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 29ms (Views: 5.9ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-23 11:51:49 +0530
+Processing by UsersController#new_user as HTML
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2019-01-23 11:51:55 +0530
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EJ/SZX2Cp+nOzShlIouBpuPewrYl6WYSgoYBIF3h7EtxacBJH8HzJWQszDjQbRuGtFRor2iimbm3apSZbwos4w==", "username"=>"raka", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "raka"], ["LIMIT", 1]]
+  ↳ app/helpers/users_helper.rb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "raka"], ["LIMIT", 1]]
+  ↳ app/helpers/users_helper.rb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "raka"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 21ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-23 11:51:55 +0530
+Processing by UrlsController#new as HTML
+  [1m[36mConversion Load (0.4ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-23"], ["LIMIT", 1]]
+  ↳ app/controllers/urls_controller.rb:6
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 20ms (Views: 5.8ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-23 11:56:02 +0530
+Processing by UsersController#new_user as HTML
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-23 11:58:26 +0530
+Processing by UsersController#new_user as HTML
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2019-01-23 11:58:30 +0530
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7zOv75M0CFuo5kr7jDLeYtLQ/f/RiKS1VOvPuHTAQm6Oxb3D8XdclwIHrqZ+1ERChVpX5pzDWx5hB1oBRiuCxg==", "username"=>"raka", "password"=>"[FILTERED]", "commit"=>"Login"}
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `sweep' for #<ActionDispatch::Request::Session:0x00007fa7f3245f70>):
+  
+app/controllers/users_controller.rb:13:in `login'
+Started POST "/users/login" for 127.0.0.1 at 2019-01-23 12:22:42 +0530
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7zOv75M0CFuo5kr7jDLeYtLQ/f/RiKS1VOvPuHTAQm6Oxb3D8XdclwIHrqZ+1ERChVpX5pzDWx5hB1oBRiuCxg==", "username"=>"raka", "password"=>"[FILTERED]", "commit"=>"Login"}
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `sweep' for #<ActionDispatch::Request::Session:0x00007fa7f25c4df0>):
+  
+app/controllers/users_controller.rb:13:in `login'
+Started POST "/users/login" for 127.0.0.1 at 2019-01-23 12:23:12 +0530
+  
+ActionController::RoutingError (undefined local variable or method `session' for UsersController:Class):
+  
+app/controllers/users_controller.rb:4:in `<class:UsersController>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started GET "/" for 127.0.0.1 at 2019-01-23 12:52:40 +0530
+  
+SyntaxError (/Users/rakesh/UrlShortner/app/controllers/users_controller.rb:66: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/users_controller.rb:66: syntax error, unexpected end-of-input, expecting end
+Started GET "/" for 127.0.0.1 at 2019-01-23 12:52:55 +0530
+Processing by UsersController#new_user as HTML
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 69ms (Views: 18.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2019-01-23 12:53:00 +0530
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kaB2SJtRVpd+QcKTxbBiH4hxebc3JszP3r26ydYSY7nwVmRk+RICW9SgJs43Vvg/3/vTrnptM2TrUS9w5PmjEQ==", "username"=>"raka", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "raka"], ["LIMIT", 1]]
+  ↳ app/helpers/users_helper.rb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "raka"], ["LIMIT", 1]]
+  ↳ app/helpers/users_helper.rb:15
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 95ms (ActiveRecord: 12.9ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-23 12:53:01 +0530
+Processing by UrlsController#new as HTML
+  [1m[36mConversion Load (0.6ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-23"], ["LIMIT", 1]]
+  ↳ app/controllers/urls_controller.rb:6
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 73ms (Views: 6.8ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-23 12:53:04 +0530
+Processing by UsersController#new_user as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-23 12:53:05 +0530
+Processing by UrlsController#new as HTML
+  [1m[36mConversion Load (1.1ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-23"], ["LIMIT", 1]]
+  ↳ app/controllers/urls_controller.rb:6
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 13ms (Views: 9.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/urls/logout" for 127.0.0.1 at 2019-01-23 12:53:11 +0530
+Processing by UrlsController#logout as HTML
+Redirected to http://0.0.0.0:3000/users/new_user
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new_user" for 127.0.0.1 at 2019-01-23 12:53:11 +0530
+Processing by UsersController#new_user as HTML
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-23 12:53:15 +0530
+Processing by UrlsController#new as HTML
+  [1m[36mConversion Load (0.7ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-23"], ["LIMIT", 1]]
+  ↳ app/controllers/urls_controller.rb:6
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 11ms (Views: 6.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-23 13:05:19 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/users/new_user
+  [1m[36mConversion Load (0.5ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-23"], ["LIMIT", 1]]
+  ↳ app/controllers/urls_controller.rb:9
+Completed 302 Found in 21ms (ActiveRecord: 10.2ms)
+
+
+Started GET "/users/new_user" for 127.0.0.1 at 2019-01-23 13:05:19 +0530
+Processing by UsersController#new_user as HTML
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/u" for 127.0.0.1 at 2019-01-23 13:07:25 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/u"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'

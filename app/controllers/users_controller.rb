@@ -3,10 +3,16 @@ class UsersController < ApplicationController
 	include UsersHelper
 
 	def new_user
+		if session[:user] == "yes"
+			redirect_to urls_new_path
+		end
+		session[:user] = "no"
 	end
 
 	def signup
-
+		if session[:user] == "yes"
+			redirect_to urls_new_path
+		end
 	end
 
 	def login
@@ -30,6 +36,7 @@ class UsersController < ApplicationController
 			return
 
 		elsif login_status == "logged in"
+			session[:user] = "yes"
   			redirect_to urls_new_path
   			return
 

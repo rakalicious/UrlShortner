@@ -3,6 +3,9 @@ class UrlsController < ApplicationController
 	require 'date'
 
 	def new
+		if session[:user] == "no"
+			redirect_to users_new_user_path
+		end
 		@conv = Conversion.find_by(date: Date.today)
 		puts @conv.count
 	end
@@ -25,6 +28,10 @@ class UrlsController < ApplicationController
 		render 'urls/new'
 	end
 
+	def logout
+		session[:user] = "no"
+		redirect_to users_new_user_path
+	end
 	#def convert_url
 	#	
 	#	puts params
