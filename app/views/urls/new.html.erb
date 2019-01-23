@@ -8,6 +8,9 @@
       <%= form.label :full_url %>
       <%= form.text_field :long %>
 
+      <%= form.label :domain %>
+      <%= form.text_field :domain %>
+
 
      <%= form.submit 'Long to Short'%><br>
 <% end %>
@@ -19,6 +22,7 @@
     <%= form.submit 'Short to Long'%><br>
 
     <% pika = params[:commit] %>
+    <% puts params %>
     
 
     <%= form.label :long_op ,"#{pika}" %><br>

@@ -1,10 +1,12 @@
 class UsersController < ApplicationController
 
 	include UsersHelper
+	require 'time'
 
 	def new_user
 		if session[:user] == "yes"
 			redirect_to urls_new_path
+			return
 		end
 		session[:user] = "no"
 	end
@@ -23,7 +25,7 @@ class UsersController < ApplicationController
 			return
 		end
 
-		login_status = try_login(params[:username],params[:password])
+		login_status = User.try_login(params[:username],params[:password])
 
 		if login_status == "wrong username"
 			flash[:error] = "Wrong username. Try Again"
@@ -37,6 +39,8 @@ class UsersController < ApplicationController
 
 		elsif login_status == "logged in"
 			session[:user] = "yes"
+			session[:time] = Time.now
+			#session[:time] = Time.now.strftime("%H:%M:%S")
   			redirect_to urls_new_path
   			return
 
@@ -53,7 +57,7 @@ class UsersController < ApplicationController
 			redirect_to users_signup_path
 			return
 		end
-		try_signup(params[:username], params[:password], params[:email], params[:fullname])
+		User.try_signup(params[:username], params[:password], params[:email], params[:fullname])
 		redirect_to users_new_user_path
 	end
 
