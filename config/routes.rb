@@ -7,7 +7,8 @@ Rails.application.routes.draw do
 
   post 'users/signup_entry'
   post 'users/login'
-  post 'urls/convert_url'
+  post 'urls/convert_long'
+  post 'urls/convert_short'
 
   root 'users#new_user'
 

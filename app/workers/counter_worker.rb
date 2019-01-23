@@ -6,7 +6,8 @@ class CounterWorker
     # Do something
 
     if Conversion.find_by(date: Date.today) == nil
-    	count_today = Conversion.create(:date => Date.today , :count => 0)
+    	#count_today = Conversion.create(:date => Date.today , :count => 1)
+      Conversion.create(:date => Date.today , :count => 1)
     else
     	count_today = Conversion.find_by(date: Date.today)
     	live_count = count_today.count

@@ -26,14 +26,15 @@
     	<%= form.text_field :password %><br>
 
     	<%= form.submit 'signup' %>
+
+<% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>"><%= value %></div>
+    <% end %>
+    <%= yield %>
+
     </center>
   </p>
      
-  <p>
-
-    
-
-
-  </p>
+  
   <%= link_to 'back', users_new_user_path %>
 <% end %>

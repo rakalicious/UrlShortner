@@ -1,10 +1,14 @@
 module UrlsHelper
+
+	def check_if_empty(*args)
+		puts args
+	end
+
 	def new_long_incoming(long_url)
 		#Rails.cache.clear
 		if Url.find_by(long_url: long_url) == nil
 			 @urls = Url.new({:long_url => long_url, :short_url => convert_to_short})
 			 @urls.save
-			 puts "hey"
 			 return Url.find_by(long_url: long_url).short_url
 		else
 			@short_url = Rails.cache.fetch(long_url , :expires_in => 5.minutes) do
@@ -24,9 +28,16 @@ module UrlsHelper
 
 	def find_long_url(short_url)
 		if Url.find_by(short_url: short_url) == nil
-			puts "no such short url"
+			flash[:error] = "no such short url"
+			render urls_new_path
+			return
 		else
-			return Url.find_by(short_url: short_url).long_url
+			@long_url = Rails.cache.fetch(short_url , :expires_in => 5.minutes) do
+
+				Url.where(short_url: short_url).first.long_url
+				end
+			return @long_url
+			#return Url.find_by(short_url: short_url).long_url
 		end
 	end
 

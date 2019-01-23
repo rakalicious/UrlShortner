@@ -1,9 +1,7 @@
 
-
 <%= link_to 'Logout', users_new_user_path %>
 
-
-<%= form_with url: urls_convert_url_path do |form| %>
+<%= form_with url: urls_convert_long_path do |form| %>
   <p>
     <center>
       
@@ -12,12 +10,12 @@
 
 
      <%= form.submit 'Long to Short'%><br>
+<% end %>
+<%= form_with url: urls_convert_short_path do |form| %>
 
       <%= form.label :short_url %>
       <%= form.text_field :short %>
-
-    
-    
+      <%= form.label "#{@conv.count}" %>
     <%= form.submit 'Short to Long'%><br>
 
     <% pika = params[:commit] %>
@@ -25,6 +23,10 @@
 
     <%= form.label :long_op ,"#{pika}" %><br>
 
+<% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>"><%= value %></div>
+    <% end %>
+    <%= yield %>
     
     </center>
   </p>
