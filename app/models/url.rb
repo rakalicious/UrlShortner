@@ -9,10 +9,10 @@ class Url < ApplicationRecord
 		CounterWorker.perform_async
 	end
 
-	def self.new_long_incoming(long_url , number)
+	def self.new_long_incoming(long_url ,dom_short , number)
 		#Rails.cache.clear
 		if Url.find_by(long_url: long_url) == nil
-			 @urls = Url.new({:long_url => long_url, :short_url => UrlsHelper.convert_to_short(number)})
+			 @urls = Url.new({:long_url => long_url, :short_url => UrlsHelper.convert_to_short(number) , :short_domain => dom_short})
 			 @urls.save
 			 return Url.find_by(long_url: long_url).short_url
 		else

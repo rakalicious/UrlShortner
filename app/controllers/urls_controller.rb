@@ -22,7 +22,7 @@ class UrlsController < ApplicationController
 	def convert_long
 		puts params
 		dom_short = Url.new_domain_incoming(params[:domain] , 4)
-		short = Url.new_long_incoming(params[:long] , 7)
+		short = Url.new_long_incoming(params[:long] , dom_short ,7)
 		params[:commit] = dom_short +"."+ short 
 		@conv = Conversion.find_by(date: Date.today)
 
