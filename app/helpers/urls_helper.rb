@@ -10,16 +10,27 @@ module UrlsHelper
 	end
 
 	
-	def self.convert_to_short(number) 
-		charset = Array('A'..'Z') + Array('a'..'z') + Array('0'..'9')
+	def self.random_n_string(number , n_bit = 62) 
+		charset = Array('A'..'Z') + Array('a'..'z') 
+
+		if n_bit == 62
+			charset = charset + Array('0'..'9')
+		end
   		return Array.new(number) { charset.sample }.join
 
 	end
 
 
-	private
-  		def url_params_log
-    		params.permit(:long, :short)
-  		end
+	def is_session_over_yes
+		if session[:user] == "no"
+			redirect_to users_new_user_path
+			return
+		end
+	end
+
+	def close_session
+		session[:user] = "no"
+		redirect_to users_new_user_path
+	end
   	
 end

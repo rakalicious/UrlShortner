@@ -9,23 +9,24 @@ class Url < ApplicationRecord
 		CounterWorker.perform_async
 	end
 
+
 	def self.new_long_incoming(long_url ,dom_short , number)
-		#Rails.cache.clear
+		Rails.cache.clear
 		if Url.find_by(long_url: long_url) == nil
-			temp_converted = UrlsHelper.convert_to_short(number)
-			while Url.find_by(short_url: temp_converted) != nil do
-				temp_converted = UrlsHelper.convert_to_short(number)
+
+			possible_short = UrlsHelper.random_n_string(number)
+			while Url.find_by(short_url: possible_short) != nil do
+				possible_short = UrlsHelper.random_n_string(number)
 			end
 
+			@urls = Url.new({:long_url => long_url, :short_url => possible_short , :short_domain => dom_short})
+			@urls.save
+			return Url.find_by(long_url: long_url).short_url
 
-
-			 @urls = Url.new({:long_url => long_url, :short_url => temp_converted , :short_domain => dom_short})
-			 @urls.save
-			 return Url.find_by(long_url: long_url).short_url
 		else
 			@short_url = Rails.cache.fetch(long_url , :expires_in => 5.minutes) do
 
-				Url.where(long_url: long_url).first.short_url
+				Url.where(long_url: long_url).first.short_domain + Url.where(long_url: long_url).first.short_url
 				end
 			return @short_url
 			#render json: {"h" : "hello"}
@@ -35,14 +36,12 @@ class Url < ApplicationRecord
 	def self.new_domain_incoming(long_domain , number)
 		#Rails.cache.clear
 		if Domain.find_by(domain_name: long_domain) == nil
-			temp_converted = UrlsHelper.convert_to_short(number)
-			while Domain.find_by(short_domain: temp_converted) != null do
-				temp_converted = UrlsHelper.convert_to_short(number)
+			possible_long = UrlsHelper.random_n_string(number)
+			while Domain.find_by(short_domain: possible_long) != null do
+				possible_long = UrlsHelper.random_n-string(number)
 			end
 
-
-
-			 @domains = Domain.new({:domain_name => long_domain, :short_domain => UrlsHelper.convert_to_short(number)})
+			 @domains = Domain.new({:domain_name => long_domain, :short_domain => possible_long})
 			 @domains.save
 			 return Domain.find_by(domain_name: long_domain).short_domain
 		else
@@ -58,9 +57,7 @@ class Url < ApplicationRecord
 
 	def self.find_long_url(short_url)
 		if Url.find_by(short_url: short_url) == nil
-			flash[:error] = "no such short url"
-			render urls_new_path
-			return
+			return "no such short url exist"
 		else
 			@long_url = Rails.cache.fetch(short_url , :expires_in => 5.minutes) do
 

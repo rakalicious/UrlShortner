@@ -2,6 +2,7 @@ module UsersHelper
 
 	def check_if_empty(*args) 
 		for i in args
+			puts i
 			if i == ""
 				return true
 			end
@@ -9,7 +10,7 @@ module UsersHelper
 		end
 	end
 
-	def check_pass_match(pass, confirm_pass)
+	def check_password_match(pass, confirm_pass)
 		if pass == confirm_pass
 			return true
 		end

@@ -20,7 +20,7 @@
       <%= form.text_field :short %>
     <%= form.submit 'Short to Long'%><br><br><br>
 
-    <% pika = params[:commit] %><br><br>
+    <% pika = @req_ans %><br><br>
     <% puts params %>
     
       <%= form.label "Count = #{@conv.count}" %><br><br>

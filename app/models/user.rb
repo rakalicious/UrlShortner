@@ -20,7 +20,7 @@ class User < ApplicationRecord
 		#@users.save
 	end
 
-	def self.checkusername_available(username)
+	def self.check_username_available(username)
 		if User.find_by(username: username) == nil
 			return true
 		end

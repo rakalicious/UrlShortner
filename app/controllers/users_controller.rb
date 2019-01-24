@@ -47,18 +47,18 @@ class UsersController < ApplicationController
 
 
 	def signup_entry
-		if check_if_empty(params[:username], params[:password], params[:email], params[:fullname], params[:confirm_password]) == false
+		if check_if_empty(params[:username], params[:password], params[:email], params[:fullname], params[:confirm_password]) == true
 			flash[:error] = "error in field"
 			redirect_to users_signup_path
 			return
 		end
-		if check_username_available(params[:username]) == false
+		if User.check_username_available(params[:username]) == false
 			flash[:error] = "Username not available"
 			redirect_to users_signup_path
 			return
 
 		end
-		if check_pass_match(params[:password] , params[:confirm_password]) == false
+		if check_password_match(params[:password] , params[:confirm_password]) == false
 			flash[:error] = "error in field"
 			redirect_to users_signup_path
 			return
@@ -68,9 +68,6 @@ class UsersController < ApplicationController
 		redirect_to users_new_user_path
 	end
 
-	def username_available
-		
-	end
 
 end
 
