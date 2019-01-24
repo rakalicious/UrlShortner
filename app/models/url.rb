@@ -13,7 +13,7 @@ class Url < ApplicationRecord
 		#Rails.cache.clear
 		if Url.find_by(long_url: long_url) == nil
 			temp_converted = UrlsHelper.convert_to_short(number)
-			while Url.find_by(short_url: temp_converted) != null do
+			while Url.find_by(short_url: temp_converted) != nil do
 				temp_converted = UrlsHelper.convert_to_short(number)
 			end
 

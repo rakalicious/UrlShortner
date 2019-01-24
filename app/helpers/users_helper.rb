@@ -1,11 +1,11 @@
 module UsersHelper
 
-	def check_if_empty(*args)
+	def check_if_empty(*args) 
 		for i in args
 			if i == ""
-				return false
+				return true
 			end
-			return true
+			return false
 		end
 	end
 
@@ -16,5 +16,11 @@ module UsersHelper
 			return false
 	end
 
+	def is_session_over_no
+		if session[:user] == "yes"
+			redirect_to urls_new_path
+			return
+		end
+	end
 	
 end

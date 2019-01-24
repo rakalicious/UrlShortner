@@ -1,6 +1,6 @@
 class User < ApplicationRecord
 	validates :username, presence: true
-	validates :password, presence: true
+	validates :password, presence: true 
 	validates :email, presence: true
 	validates :name, presence: true
 
@@ -18,6 +18,13 @@ class User < ApplicationRecord
 	def self.try_signup(username, password, email, fullname)
 		@users = User.create({:username => username , :password => password , :email => email , :name => fullname})
 		#@users.save
+	end
+
+	def self.checkusername_available(username)
+		if User.find_by(username: username) == nil
+			return true
+		end
+		return false
 	end
 
 end

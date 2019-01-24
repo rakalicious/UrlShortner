@@ -4,22 +4,17 @@ class UsersController < ApplicationController
 	require 'time'
 
 	def new_user
-		if session[:user] == "yes"
-			redirect_to urls_new_path
-			return
-		end
-		session[:user] = "no"
+		is_session_over_no
+		#session[:user] = "no"
 	end
 
 	def signup
-		if session[:user] == "yes"
-			redirect_to urls_new_path
-		end
+		is_session_over_no
 	end
 
 	def login
 
-		if check_if_empty(params[:username] , params[:password]) == false
+		if check_if_empty(params[:username] , params[:password]) == true
 			flash[:error] = "Field cannot be empty"
   			redirect_to root_path
 			return
@@ -52,13 +47,16 @@ class UsersController < ApplicationController
 
 
 	def signup_entry
-		puts "hey heyhey"
-		puts params
 		if check_if_empty(params[:username], params[:password], params[:email], params[:fullname], params[:confirm_password]) == false
 			flash[:error] = "error in field"
-			puts "empty"
 			redirect_to users_signup_path
 			return
+		end
+		if check_username_available(params[:username]) == false
+			flash[:error] = "Username not available"
+			redirect_to users_signup_path
+			return
+
 		end
 		if check_pass_match(params[:password] , params[:confirm_password]) == false
 			flash[:error] = "error in field"
@@ -76,11 +74,4 @@ class UsersController < ApplicationController
 
 end
 
-private
-  	def login_params
-    	puts params.require(:login).permit(:username, :password)
-  	end
-  	def signup_params
-   		params.require(:login).permit(:username, :password, :email, :fullname)
-  	end
 
