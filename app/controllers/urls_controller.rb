@@ -5,9 +5,7 @@ class UrlsController < ApplicationController
 
 	def new
 
-		if (Time.parse(DateTime.now.to_s) - Time.parse(session[:time].to_s))/60 > 5
-			session[:user] = "no"
-		end
+		session_timeout(5)
 
 		is_session_over_yes
 

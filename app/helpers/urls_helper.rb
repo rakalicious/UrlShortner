@@ -19,7 +19,11 @@ module UrlsHelper
   		return Array.new(number) { charset.sample }.join
 
 	end
-
+	def session_timeout(time)
+		if (Time.parse(DateTime.now.to_s) - Time.parse(session[:time].to_s))/60 > time
+			session[:user] = "no"
+		end
+	end
 
 	def is_session_over_yes
 		if session[:user] == "no"
