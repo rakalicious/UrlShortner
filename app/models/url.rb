@@ -9,9 +9,31 @@ class Url < ApplicationRecord
 		CounterWorker.perform_async
 	end
 
+	def self.shorten_url(long_url , long_domain)
+		number = 62
+		if Url.find_by(long_url: long_url) == nil
+			short_domain = Url.find_short_domain(long_domain)
 
+			possible_short = UrlsHelper.random_n_string(7,number)
+			while Url.find_by(short_url: possible_short) != nil do
+				possible_short = UrlsHelper.random_n_string(7,number)
+			end
+
+			@short_url = Url.create({:long_url => long_url, :short_url => possible_short , :short_domain => short_domain})
+			#@urls.save
+			return (short_domain)+"/"+(Url.find_by(long_url: long_url).short_url)
+		else
+			@short_url = Rails.cache.fetch(long_url , :expires_in => 5.minutes) do
+
+				(Url.where(long_url: long_url).first.short_domain )+"/" +(Url.where(long_url: long_url).first.short_url)
+				end
+			return @short_url
+		end
+
+	end
+=begin
 	def self.new_long_incoming(long_url ,dom_short , number)
-		Rails.cache.clear
+		#Rails.cache.clear
 		if Url.find_by(long_url: long_url) == nil
 
 			possible_short = UrlsHelper.random_n_string(number)
@@ -19,8 +41,8 @@ class Url < ApplicationRecord
 				possible_short = UrlsHelper.random_n_string(number)
 			end
 
-			@urls = Url.new({:long_url => long_url, :short_url => possible_short , :short_domain => dom_short})
-			@urls.save
+			@urls = Url.create({:long_url => long_url, :short_url => possible_short , :short_domain => dom_short})
+			#@urls.save
 			return Url.find_by(long_url: long_url).short_url
 
 		else
@@ -29,20 +51,20 @@ class Url < ApplicationRecord
 				Url.where(long_url: long_url).first.short_domain + Url.where(long_url: long_url).first.short_url
 				end
 			return @short_url
-			#render json: {"h" : "hello"}
 		end
 	end
-
-	def self.new_domain_incoming(long_domain , number)
+=end
+	def self.find_short_domain(long_domain)
+		number = 52
 		#Rails.cache.clear
 		if Domain.find_by(domain_name: long_domain) == nil
-			possible_long = UrlsHelper.random_n_string(number)
-			while Domain.find_by(short_domain: possible_long) != null do
-				possible_long = UrlsHelper.random_n-string(number)
+			possible_domain = UrlsHelper.random_n_string(4,number)
+			while Domain.find_by(short_domain: possible_domain) != null do
+				possible_domain = UrlsHelper.random_n_string(4,number)
 			end
 
-			 @domains = Domain.new({:domain_name => long_domain, :short_domain => possible_long})
-			 @domains.save
+			 @short_domain = Domain.create({:domain_name => long_domain, :short_domain => possible_domain})
+			 #@domains.save
 			 return Domain.find_by(domain_name: long_domain).short_domain
 		else
 			@short_domain = Rails.cache.fetch(long_domain , :expires_in => 5.minutes) do
@@ -50,10 +72,8 @@ class Url < ApplicationRecord
 				Domain.where(domain_name: long_domain).first.short_domain
 				end
 			return @short_domain
-			#render json: {"h" : "hello"}
 		end
 	end
-
 
 	def self.find_long_url(short_url)
 		if Url.find_by(short_url: short_url) == nil

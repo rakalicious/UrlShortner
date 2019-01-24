@@ -15,6 +15,7 @@ class UrlsController < ApplicationController
 	end
 
 	def convert_long
+		is_session_over_yes
 		long_to_short
 		
 		@conv = Conversion.find_by(date: Date.today)
@@ -23,9 +24,10 @@ class UrlsController < ApplicationController
 	end
 
 	def long_to_short
-		short_domain = Url.new_domain_incoming(params[:domain] , 4)
-		short_url = Url.new_long_incoming(params[:long] , short_domain ,7)
-		@req_ans = short_domain +"/"+ short_url
+		short_url = Url.shorten_url(params[:long] , params[:domain])
+		puts short_url
+		#@req_ans = short_domain +"/"+ short_url
+		@req_ans = short_url
 		if params[:action] == "convert_long"
 			return @req_ans
 		else
@@ -34,6 +36,7 @@ class UrlsController < ApplicationController
 	end
 
 	def convert_short
+		is_session_over_yes
 		short_to_long
 		@conv = Conversion.find_by(date: Date.today)
 
