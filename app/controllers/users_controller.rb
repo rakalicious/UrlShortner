@@ -5,6 +5,7 @@ class UsersController < ApplicationController
 
 	def new_user
 		is_session_over_no
+		flash[:error] = ""
 		#session[:user] = "no"
 	end
 

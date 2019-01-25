@@ -24,9 +24,16 @@ class UrlsController < ApplicationController
 	def long_to_short
 		short_url = Url.shorten_url(params[:long] , params[:domain])
 		puts short_url
-		#@req_ans = short_domain +"/"+ short_url
 		@req_ans = short_url
+		if short_url == false
+			@req_ans = "something went wrong"
+			flash[:error] = "wrong domain"
+			return
+		end
+		#@req_ans = short_domain +"/"+ short_url
+		
 		if params[:action] == "convert_long"
+			flash[:error] = ""
 			return @req_ans
 		else
 			render json: {"short" => @req_ans}
@@ -44,15 +51,16 @@ class UrlsController < ApplicationController
 	def short_to_long
 		@req_ans = Url.find_long_url(params[:short])
 
-		if @req_ans == "no such short url exist"
+		if @req_ans == false
 			flash[:error] = "no such short url"
-					@conv = Conversion.find_by(date: Date.today)
+			@conv = Conversion.find_by(date: Date.today)
 
 			render urls_new_path
 
 			return
 		end
 		if params[:action] == "convert_short"
+			flash[:error] = ""
 				return @req_ans
 		else
 				render json: {"long" => @req_ans}
