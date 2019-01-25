@@ -7,6 +7,7 @@ class UsersController < ApplicationController
 		is_session_over_no
 		#CounterInitWorker.perform_async
 		flash[:error] = ""
+		
 		#session[:user] = "no"
 	end
 

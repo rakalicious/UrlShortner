@@ -1,9 +1,15 @@
+	require 'elasticsearch/model'
+
+
 class Url < ApplicationRecord
+	include Elasticsearch::Model
+  include Elasticsearch::Model::Callbacks
 	after_create :start
 
 	validates :long_url, presence: true
 	validates :short_url, presence: true
-
+	
+  	index_name('urls')
 
 	def start
 		CounterWorker.perform_async
@@ -107,5 +113,19 @@ class Url < ApplicationRecord
 			#return Url.find_by(short_url: short_url).long_url
 		end
 	end
+
+
+	def self.search(query)
+  __elasticsearch__.search(
+    {
+      query: {
+        multi_match: {
+          query: query,
+          fields: ['long_url^10', 'short_url']
+        }
+      }
+    }
+  )
+end
 
 end
