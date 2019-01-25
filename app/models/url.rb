@@ -9,7 +9,8 @@ class Url < ApplicationRecord
 	validates :long_url, presence: true
 	validates :short_url, presence: true
 	
-  	index_name('urls')
+  	index_name('urls') 
+
 
 	def start
 		CounterWorker.perform_async
@@ -33,6 +34,7 @@ class Url < ApplicationRecord
 
 	def self.shorten_url(long_url , long_domain)
 		number = 62
+		Rails.cache.clear
 		@url_var = Url.find_by(long_url: long_url)
 		if @url_var == nil
 			short_domain = Url.find_short_domain(long_domain)
@@ -114,18 +116,32 @@ class Url < ApplicationRecord
 		end
 	end
 
+	#def self.search(query)
+  #__elasticsearch__.search(
+   # {
+    #  query: {
+     #   multi_match: {
+      #    query: query,
+       #   fields: ['long_url^10', 'short_url']
+       # }
+ #     }
+  #  }
+#  )
+#end
+def self.search(query)
+		query="*"+query+"*"
+        __elasticsearch__.search(
+              {
+                query: {
+                    query_string: {
+                        query: query,
+                        default_field: 'long_url'
 
-	def self.search(query)
-  __elasticsearch__.search(
-    {
-      query: {
-        multi_match: {
-          query: query,
-          fields: ['long_url^10', 'short_url']
-        }
-      }
-    }
-  )
-end
+                    }
+                }
+                }
+            )
+    end
+
 
 end

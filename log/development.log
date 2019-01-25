@@ -7406,3 +7406,553 @@ Processing by UsersController#new_user as HTML
 Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/search?utf8=%E2%9C%93&q=charizard" for 127.0.0.1 at 2019-01-25 15:40:09 +0530
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"charizard"}
+  Rendering search/search.html.erb within layouts/application
+  Rendered search/search.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 66ms (Views: 26.9ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q=charizard" for 127.0.0.1 at 2019-01-25 15:55:07 +0530
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"charizard"}
+  Rendering search/search.html.erb within layouts/application
+  Rendered search/search.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 5.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     9: <% end %>
+    10: 
+    11: <ul>
+    12:   <% @urls.each do |url| %>
+    13:     <li>
+    14:       <h3>
+    15:         <%= link_to url.short_url, controller: "urls", action: "new"%>
+  
+app/views/search/search.html.erb:12:in `_app_views_search_search_html_erb__2288301153283617316_70139148437600'
+Started GET "/" for 127.0.0.1 at 2019-01-25 15:59:51 +0530
+Processing by UsersController#new_user as HTML
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 31ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/index" for 127.0.0.1 at 2019-01-25 15:59:57 +0530
+Processing by UrlsController#index as HTML
+  Rendering urls/index.html.erb within layouts/application
+  Rendered urls/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/index" for 127.0.0.1 at 2019-01-25 16:00:47 +0530
+Processing by UrlsController#index as HTML
+  Rendering urls/index.html.erb within layouts/application
+  Rendered urls/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/index" for 127.0.0.1 at 2019-01-25 16:00:49 +0530
+Processing by UrlsController#index as HTML
+  Rendering urls/index.html.erb within layouts/application
+  Rendered urls/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/index" for 127.0.0.1 at 2019-01-25 16:02:46 +0530
+Processing by UrlsController#index as HTML
+  Rendering urls/index.html.erb within layouts/application
+  Rendered urls/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/index" for 127.0.0.1 at 2019-01-25 16:12:22 +0530
+Processing by UrlsController#index as HTML
+  Rendering urls/index.html.erb within layouts/application
+  Rendered urls/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/index" for 127.0.0.1 at 2019-01-25 16:12:23 +0530
+Processing by UrlsController#index as HTML
+  Rendering urls/index.html.erb within layouts/application
+  Rendered urls/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/index" for 127.0.0.1 at 2019-01-25 16:18:00 +0530
+Processing by UrlsController#index as HTML
+  Rendering urls/index.html.erb within layouts/application
+  Rendered urls/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/index" for 127.0.0.1 at 2019-01-25 16:18:34 +0530
+Processing by UrlsController#index as HTML
+  Rendering urls/index.html.erb within layouts/application
+  Rendered urls/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-25 16:19:21 +0530
+Processing by UsersController#new_user as HTML
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (25.6ms)
+Completed 200 OK in 32ms (Views: 29.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2019-01-25 16:19:25 +0530
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NR/lBSrr3RGknVl/G0zcVp9YxBewzJyCNE1SXlHPv9pU6fcpSKiJ3Q58vSLpqkZ2yNJuDv2HYykBocfnYyR/cg==", "username"=>"raka", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "raka"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "raka"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 43ms (ActiveRecord: 16.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-25 16:19:25 +0530
+Processing by UrlsController#new as HTML
+  [1m[36mConversion Load (0.9ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-25"], ["LIMIT", 1]]
+  ↳ app/controllers/urls_controller.rb:21
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 37ms (Views: 8.2ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/urls/logout" for 127.0.0.1 at 2019-01-25 16:19:29 +0530
+Processing by UrlsController#logout as HTML
+Redirected to http://0.0.0.0:3000/users/new_user
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new_user" for 127.0.0.1 at 2019-01-25 16:19:29 +0530
+Processing by UsersController#new_user as HTML
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2019-01-25 16:39:43 +0530
+Processing by SearchController#search as HTML
+  Rendering search/search.html.erb within layouts/application
+  Rendered search/search.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of nil into String):
+    4:   <p>
+    5:     <%= f.label "Search for" %>
+    6:     <%= text_field_tag :q, params[:q] %>
+    7:     <% params[:q] = "*" + params[:q] %>
+    8:     <%= submit_tag "Go", name: nil %>
+    9:   </p>
+   10: <% end %>
+  
+app/views/search/search.html.erb:7:in `+'
+app/views/search/search.html.erb:7:in `block in _app_views_search_search_html_erb__2288301153283617316_70139127898260'
+app/views/search/search.html.erb:3:in `_app_views_search_search_html_erb__2288301153283617316_70139127898260'
+Started GET "/search" for 127.0.0.1 at 2019-01-25 16:40:18 +0530
+Processing by SearchController#search as HTML
+  Rendering search/search.html.erb within layouts/application
+  Rendered search/search.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1..2)):
+    3: <%= form_for search_path, method: :get do |f| %>
+    4:   <p>
+    5:     <%= f.label "Search for" %>
+    6:     <%= text_field_tag :q, t %>
+    7:     <% params[:q] = "*" + t %>
+    8:     <%= submit_tag "Go", name: nil %>
+    9:   </p>
+  
+app/views/search/search.html.erb:6:in `block in _app_views_search_search_html_erb__2288301153283617316_70139122391900'
+app/views/search/search.html.erb:3:in `_app_views_search_search_html_erb__2288301153283617316_70139122391900'
+Started GET "/search" for 127.0.0.1 at 2019-01-25 16:41:06 +0530
+Processing by SearchController#search as HTML
+  Rendering search/search.html.erb within layouts/application
+  Rendered search/search.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q=mithi" for 127.0.0.1 at 2019-01-25 16:41:09 +0530
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"mithi"}
+  Rendering search/search.html.erb within layouts/application
+  Rendered search/search.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 65ms (Views: 18.7ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q=mithi" for 127.0.0.1 at 2019-01-25 16:41:26 +0530
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"mithi"}
+  Rendering search/search.html.erb within layouts/application
+  Rendered search/search.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q=*mithi" for 127.0.0.1 at 2019-01-25 16:41:28 +0530
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"*mithi"}
+  Rendering search/search.html.erb within layouts/application
+  Rendered search/search.html.erb within layouts/application (173.4ms)
+Completed 200 OK in 178ms (Views: 176.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q=*mi" for 127.0.0.1 at 2019-01-25 16:41:35 +0530
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"*mi"}
+  Rendering search/search.html.erb within layouts/application
+  Rendered search/search.html.erb within layouts/application (32.8ms)
+Completed 200 OK in 38ms (Views: 36.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q=*mi" for 127.0.0.1 at 2019-01-25 16:42:20 +0530
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"*mi"}
+  Rendering search/search.html.erb within layouts/application
+  Rendered search/search.html.erb within layouts/application (36.4ms)
+Completed 200 OK in 50ms (Views: 39.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q=mithi" for 127.0.0.1 at 2019-01-25 16:42:26 +0530
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"mithi"}
+  Rendering search/search.html.erb within layouts/application
+  Rendered search/search.html.erb within layouts/application (34.1ms)
+Completed 200 OK in 38ms (Views: 37.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q=mi" for 127.0.0.1 at 2019-01-25 16:42:31 +0530
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"mi"}
+  Rendering search/search.html.erb within layouts/application
+  Rendered search/search.html.erb within layouts/application (38.0ms)
+Completed 200 OK in 43ms (Views: 41.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q=*mi" for 127.0.0.1 at 2019-01-25 16:42:33 +0530
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"*mi"}
+  Rendering search/search.html.erb within layouts/application
+  Rendered search/search.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 29ms (Views: 27.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q=mi" for 127.0.0.1 at 2019-01-25 16:42:38 +0530
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"mi"}
+  Rendering search/search.html.erb within layouts/application
+  Rendered search/search.html.erb within layouts/application (33.9ms)
+Completed 200 OK in 37ms (Views: 36.3ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUrl Load (58.6ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE (mithi) LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUrl Load (0.5ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."long_url" = $1 LIMIT $2[0m  [["long_url", "mithi"], ["LIMIT", 1]]
+  [1m[36mUrl Load (0.8ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."long_url" = $1 LIMIT $2[0m  [["long_url", "*mi"], ["LIMIT", 1]]
+  [1m[36mUrl Load (0.5ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."long_url" = $1 LIMIT $2[0m  [["long_url", "mi"], ["LIMIT", 1]]
+Started GET "/search?utf8=%E2%9C%93&q=mi" for 127.0.0.1 at 2019-01-25 17:37:29 +0530
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"mi"}
+  Rendering search/search.html.erb within layouts/application
+  [1m[36mUrl Load (1.5ms)[0m  [1m[34mSELECT "urls".* FROM "urls" WHERE 1=0[0m
+  ↳ app/views/search/search.html.erb:13
+  Rendered search/search.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 318ms (Views: 51.3ms | ActiveRecord: 12.5ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q=*mi*" for 127.0.0.1 at 2019-01-25 17:37:32 +0530
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"*mi*"}
+  Rendering search/search.html.erb within layouts/application
+  [1m[36mUrl Load (3.2ms)[0m  [1m[34mSELECT "urls".* FROM "urls" WHERE 1=0[0m
+  ↳ app/views/search/search.html.erb:13
+  Rendered search/search.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 27ms (Views: 21.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q=**mi**" for 127.0.0.1 at 2019-01-25 17:38:29 +0530
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"**mi**"}
+  Rendering search/search.html.erb within layouts/application
+  [1m[36mUrl Load (0.9ms)[0m  [1m[34mSELECT "urls".* FROM "urls" WHERE 1=0[0m
+  ↳ app/views/search/search.html.erb:13
+  Rendered search/search.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 24ms (Views: 21.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q=mithi" for 127.0.0.1 at 2019-01-25 17:38:33 +0530
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"mithi"}
+  Rendering search/search.html.erb within layouts/application
+  [1m[36mUrl Load (2.2ms)[0m  [1m[34mSELECT "urls".* FROM "urls" WHERE 1=0[0m
+  ↳ app/views/search/search.html.erb:13
+  Rendered search/search.html.erb within layouts/application (38.3ms)
+Completed 200 OK in 42ms (Views: 38.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q=mithi" for 127.0.0.1 at 2019-01-25 17:39:00 +0530
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"mithi"}
+  Rendering search/search.html.erb within layouts/application
+  [1m[36mUrl Load (0.9ms)[0m  [1m[34mSELECT "urls".* FROM "urls" WHERE 1=0[0m
+  ↳ app/views/search/search.html.erb:13
+  Rendered search/search.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 32ms (Views: 20.0ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q=mithi" for 127.0.0.1 at 2019-01-25 17:39:02 +0530
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"mithi"}
+  Rendering search/search.html.erb within layouts/application
+  [1m[36mUrl Load (1.0ms)[0m  [1m[34mSELECT "urls".* FROM "urls" WHERE 1=0[0m
+  ↳ app/views/search/search.html.erb:13
+  Rendered search/search.html.erb within layouts/application (34.1ms)
+Completed 200 OK in 40ms (Views: 36.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q=mithi" for 127.0.0.1 at 2019-01-25 17:39:16 +0530
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"mithi"}
+  Rendering search/search.html.erb within layouts/application
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT "urls".* FROM "urls" WHERE 1=0[0m
+  ↳ app/views/search/search.html.erb:13
+  Rendered search/search.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 28ms (Views: 14.9ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q=mithi" for 127.0.0.1 at 2019-01-25 17:39:26 +0530
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"mithi"}
+  Rendering search/search.html.erb within layouts/application
+  Rendered search/search.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 25ms (Views: 15.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q=mithi" for 127.0.0.1 at 2019-01-25 17:42:19 +0530
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"mithi"}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/rakesh/UrlShortner/app/models/url.rb:144: syntax error, unexpected end-of-input, expecting end):
+  
+app/models/url.rb:144: syntax error, unexpected end-of-input, expecting end
+app/controllers/search_controller.rb:6:in `search'
+Started GET "/search?utf8=%E2%9C%93&q=mithi" for 127.0.0.1 at 2019-01-25 17:42:34 +0530
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"mithi"}
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 2.5ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/models/url.rb:130:in `search'
+app/controllers/search_controller.rb:6:in `search'
+Started GET "/search?utf8=%E2%9C%93&q=mithi" for 127.0.0.1 at 2019-01-25 17:43:47 +0530
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"mithi"}
+  Rendering search/search.html.erb within layouts/application
+  [1m[36mUrl Load (2.2ms)[0m  [1m[34mSELECT "urls".* FROM "urls" WHERE 1=0[0m
+  ↳ app/views/search/search.html.erb:13
+  Rendered search/search.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 120ms (Views: 40.8ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q=mithi" for 127.0.0.1 at 2019-01-25 17:43:49 +0530
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"mithi"}
+  Rendering search/search.html.erb within layouts/application
+  [1m[36mUrl Load (1.8ms)[0m  [1m[34mSELECT "urls".* FROM "urls" WHERE 1=0[0m
+  ↳ app/views/search/search.html.erb:13
+  Rendered search/search.html.erb within layouts/application (23.5ms)
+Completed 200 OK in 30ms (Views: 25.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q=mithi" for 127.0.0.1 at 2019-01-25 17:45:11 +0530
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"mithi"}
+  Rendering search/search.html.erb within layouts/application
+  Rendered search/search.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 46ms (Views: 16.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q=mithi" for 127.0.0.1 at 2019-01-25 17:45:13 +0530
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"mithi"}
+  Rendering search/search.html.erb within layouts/application
+  Rendered search/search.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q=mithi" for 127.0.0.1 at 2019-01-25 17:45:14 +0530
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"mithi"}
+  Rendering search/search.html.erb within layouts/application
+  Rendered search/search.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 25ms (Views: 23.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q=mithi" for 127.0.0.1 at 2019-01-25 17:45:14 +0530
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"mithi"}
+  Rendering search/search.html.erb within layouts/application
+  Rendered search/search.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q=mithi" for 127.0.0.1 at 2019-01-25 17:45:26 +0530
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"mithi"}
+  Rendering search/search.html.erb within layouts/application
+  Rendered search/search.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 38ms (Views: 23.2ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q=mithi" for 127.0.0.1 at 2019-01-25 17:46:19 +0530
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"mithi"}
+  Rendering search/search.html.erb within layouts/application
+  [1m[36mUrl Load (1.2ms)[0m  [1m[34mSELECT "urls".* FROM "urls" WHERE 1=0[0m
+  ↳ app/views/search/search.html.erb:13
+  Rendered search/search.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 34ms (Views: 19.5ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q=*mithi*" for 127.0.0.1 at 2019-01-25 17:46:20 +0530
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"*mithi*"}
+  Rendering search/search.html.erb within layouts/application
+  [1m[36mUrl Load (0.6ms)[0m  [1m[34mSELECT "urls".* FROM "urls" WHERE 1=0[0m
+  ↳ app/views/search/search.html.erb:13
+  Rendered search/search.html.erb within layouts/application (22.8ms)
+Completed 200 OK in 29ms (Views: 26.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q=*mithi*" for 127.0.0.1 at 2019-01-25 17:46:31 +0530
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"*mithi*"}
+  Rendering search/search.html.erb within layouts/application
+  Rendered search/search.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    10: <% end %>
+    11: 
+    12: <ul>
+    13:   <% @urls.each do |url| %>
+    14:     <li>
+    15:       <h3>
+    16:         <%= link_to url.short_url, controller: "urls", action: "new"%>
+  
+app/views/search/search.html.erb:13:in `_app_views_search_search_html_erb__2288301153283617316_70139149613260'
+Started GET "/search?utf8=%E2%9C%93&q=mithi" for 127.0.0.1 at 2019-01-25 17:46:51 +0530
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"mithi"}
+  Rendering search/search.html.erb within layouts/application
+  Rendered search/search.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 66ms (Views: 16.4ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q=na" for 127.0.0.1 at 2019-01-25 17:46:56 +0530
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"na"}
+  Rendering search/search.html.erb within layouts/application
+  Rendered search/search.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-25 17:54:50 +0530
+Processing by UsersController#new_user as HTML
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 24ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2019-01-25 17:54:55 +0530
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DhlJRTzR0m/p6y0d+AfVOfaydX8+vXnupc9nUTO2fMhv71tpXpKGo0MKyUAK4U8ZoTjfZnP2hkWQI/LoAV28YA==", "username"=>"raka", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "raka"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "raka"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 116ms (ActiveRecord: 10.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-25 17:54:55 +0530
+Processing by UrlsController#new as HTML
+  [1m[36mConversion Load (129.0ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-25"], ["LIMIT", 1]]
+  ↳ app/controllers/urls_controller.rb:14
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 258ms (Views: 7.4ms | ActiveRecord: 132.8ms)
+
+
+Started POST "/urls/convert_long" for 127.0.0.1 at 2019-01-25 17:55:01 +0530
+Processing by UrlsController#convert_long as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CtFQ7bkhzOP5XlFZP0dpcAwGbQEdQY2d2uA8IgUvN/bd72j/wUzd2ByiFC3kRNnnAE7jh1Lpp6jkoU51SxbARg==", "domain"=>"www.google.com", "long"=>"mithi", "commit"=>"Long to Short"}
+  [1m[36mUrl Load (0.6ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."long_url" = $1 LIMIT $2[0m  [["long_url", "mithi"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:37
+  [1m[36mDomain Load (0.5ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."short_domain" = $1 LIMIT $2[0m  [["short_domain", "boCB"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:47
+  [1m[36mConversion Load (0.4ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-25"], ["LIMIT", 1]]
+  ↳ app/controllers/urls_controller.rb:21
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 113ms (Views: 6.4ms | ActiveRecord: 9.6ms)
+
+
+Started POST "/urls/convert_long" for 127.0.0.1 at 2019-01-25 17:55:12 +0530
+Processing by UrlsController#convert_long as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tqq5hxrCV4SsMlWZlc/xwzoek1HhT5p8CC8Gy4ir+P9hlIGVYq9Gv0nOEO1OzEFUNlYd167nsEk2bnScxpIPTw==", "domain"=>"www.youtube.com", "long"=>"charmander", "commit"=>"Long to Short"}
+  [1m[36mUrl Load (0.6ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."long_url" = $1 LIMIT $2[0m  [["long_url", "charmander"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:37
+  [1m[36mDomain Load (0.5ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."short_domain" = $1 LIMIT $2[0m  [["short_domain", "bpGa"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:47
+  [1m[36mConversion Load (0.4ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-25"], ["LIMIT", 1]]
+  ↳ app/controllers/urls_controller.rb:21
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 15ms (Views: 7.8ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/urls/convert_short" for 127.0.0.1 at 2019-01-25 17:55:17 +0530
+Processing by UrlsController#convert_short as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g3TubAY4kENxomqP2EJak/tp1PObrtS6ADyn3NYuDsNYGr0kCzJw0AbXfuNfqq3bh3AmfOlnWV3GngCvcUADUQ==", "short"=>"CDdyqEG", "commit"=>"Short to Long"}
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = $1 LIMIT $2[0m  [["short_url", "CDdyqEG"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:106
+  [1m[36mUrl Load (0.9ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = $1 ORDER BY "urls"."id" ASC LIMIT $2[0m  [["short_url", "CDdyqEG"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:111
+  [1m[36mConversion Load (0.4ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-25"], ["LIMIT", 1]]
+  ↳ app/controllers/urls_controller.rb:48
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 15ms (Views: 7.2ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/urls/convert_long" for 127.0.0.1 at 2019-01-25 17:55:46 +0530
+Processing by UrlsController#convert_long as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xAeNoJYZG6eEelpOfN5LERi8e3F+Gx4ZWezDFGHJKJgTObWy7nQKnGGGHzqn3fuGFPT19zGzNCxnrbFDL/DfKA==", "domain"=>"www.google.com", "long"=>"mithi", "commit"=>"Long to Short"}
+  [1m[36mUrl Load (0.5ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."long_url" = $1 LIMIT $2[0m  [["long_url", "mithi"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:38
+  [1m[36mDomain Load (0.4ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."short_domain" = $1 LIMIT $2[0m  [["short_domain", "boCB"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:48
+  [1m[36mConversion Load (0.6ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-25"], ["LIMIT", 1]]
+  ↳ app/controllers/urls_controller.rb:21
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 86ms (Views: 10.1ms | ActiveRecord: 15.0ms)
+
+
