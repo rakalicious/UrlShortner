@@ -5,19 +5,22 @@ class UsersController < ApplicationController
 
 	def new_user
 		is_session_over_no
+		#CounterInitWorker.perform_async
 		flash[:error] = ""
 		#session[:user] = "no"
 	end
 
 	def signup
 		is_session_over_no
+		flash[:error] = ""
 	end
 
 	def login
 
 		if check_if_empty(params[:username] , params[:password]) == true
 			flash[:error] = "Field cannot be empty"
-  			redirect_to root_path
+			puts "empty"
+  			render users_new_user_path
 			return
 		end
 
@@ -25,12 +28,12 @@ class UsersController < ApplicationController
 
 		if login_status == "wrong username"
 			flash[:error] = "Wrong username. Try Again"
-  			redirect_to root_path
+  			render users_new_user_path
 			return
 
 		elsif login_status == "wrong password"
 			flash[:error] = "Wrong password. Try Again"
-			redirect_to root_path
+  			render users_new_user_path
 			return
 
 		elsif login_status == "logged in"
@@ -49,19 +52,19 @@ class UsersController < ApplicationController
 
 	def signup_entry
 		if check_if_empty(params[:username], params[:password], params[:email], params[:fullname], params[:confirm_password]) == true
-			flash[:error] = "error in field"
-			redirect_to users_signup_path
+			flash[:error] = "empty field not allowed"
+			render users_signup_path
 			return
 		end
 		if User.check_username_available(params[:username]) == false
 			flash[:error] = "Username not available"
-			redirect_to users_signup_path
+			render users_signup_path
 			return
 
 		end
 		if check_password_match(params[:password] , params[:confirm_password]) == false
 			flash[:error] = "error in field"
-			redirect_to users_signup_path
+			render users_signup_path
 			return
 		end
 

@@ -21,11 +21,16 @@
     <%= form.submit 'Short to Long'%><br><br><br>
 
     <% pika = @req_ans %><br><br>
-    <% puts params %>
+    <% c = 0 %>
+    <% if @conv != nil %>
+    <% #c = 0 %>
+    <% #else %>
+    <% c = @conv.count %>
+    <% end %>
     
-      <%= form.label "Count = #{1}" %><br><br>
+      <%= form.label "Count = #{c}" %><br><br>
 
-    <%= form.label :Output ,"#{pika}" %><br>
+    <%= form.label :Output ,"#{pika}" %><br><br>
 
 <% flash.each do |key, value| %>
       <div class="alert alert-<%= key %>"><%= value %></div>
