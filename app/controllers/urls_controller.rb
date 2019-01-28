@@ -12,8 +12,8 @@ class UrlsController < ApplicationController
 			redirect_to users_new_user_path
 			return
 		end
-
-		@conv = Conversion.find_by(date: Date.today)
+		@conv = Conversion.get_conv
+		#@conv = Conversion.find_by(date: Date.today)
 	end
 
 	#called when user clicks submit for long to short conversion
@@ -28,7 +28,7 @@ class UrlsController < ApplicationController
 		#if r_val == false
 		#	return
 
-		@conv = Conversion.find_by(date: Date.today)
+		@conv = Conversion.get_conv
 
 		render 'urls/new'
 	end
@@ -64,7 +64,7 @@ class UrlsController < ApplicationController
 			return
 		end
 		short_to_long
-		@conv = Conversion.find_by(date: Date.today)
+		@conv = Conversion.get_conv
 
 		render 'urls/new'
 	end
@@ -76,7 +76,7 @@ class UrlsController < ApplicationController
 		@req_ans = Url.find_long_url(params[:short])
 		if @req_ans == false
 			flash[:error] = "no such short url"
-			@conv = Conversion.find_by(date: Date.today)
+			@conv = Conversion.get_conv
 
 			render urls_new_path
 

@@ -1,4 +1,6 @@
 	require 'elasticsearch/model'
+	require 'date'
+	require 'time'
 
 
 class Url < ApplicationRecord
@@ -16,6 +18,7 @@ class Url < ApplicationRecord
 		CounterWorker.perform_async
 	end
 
+	
 
 	def self.random_string_for_domain(number)
 		possible_domain = UrlsHelper.random_n_string(4,number)
