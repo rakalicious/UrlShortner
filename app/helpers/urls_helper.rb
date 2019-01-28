@@ -30,8 +30,7 @@ module UrlsHelper
 	#if seesion got over then user is redirected to login page
 	def is_session_over_yes
 		if session[:user] == "no"
-			redirect_to users_new_user_path
-			return
+			return true
 		end
 	end
 

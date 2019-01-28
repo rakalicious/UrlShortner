@@ -21,8 +21,7 @@ module UsersHelper
 	#if session is not over then redirects user to login page else keeps on current page
 	def is_session_over_no
 		if session[:user] == "yes"
-			redirect_to urls_new_path
-			return
+			return true
 		end
 	end
 	

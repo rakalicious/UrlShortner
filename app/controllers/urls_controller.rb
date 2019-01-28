@@ -8,14 +8,22 @@ class UrlsController < ApplicationController
 
 		session_timeout(5)
 
-		is_session_over_yes
+		if is_session_over_yes == true
+			redirect_to users_new_user_path
+			return
+		end
 
 		@conv = Conversion.find_by(date: Date.today)
 	end
 
 	#called when user clicks submit for long to short conversion
 	def convert_long
-		is_session_over_yes
+		session_timeout(5)
+		if is_session_over_yes == true
+			redirect_to users_new_user_path
+			return
+		end
+
 		r_val = long_to_short
 		#if r_val == false
 		#	return
@@ -25,7 +33,10 @@ class UrlsController < ApplicationController
 		render 'urls/new'
 	end
 
-	#api for long to short
+	#api for long to short (POST)
+	#inp = POST  http://0.0.0.0:3000/urls/long_to_short?long=charmander&domain=www.youtube.com
+	#out = {"domain":"bpGa","short":"CDdyqEG"}
+
 	def long_to_short
 		short_url = Url.shorten_url(params[:long] , params[:domain])
 		puts short_url
@@ -47,7 +58,11 @@ class UrlsController < ApplicationController
 
 	#called when user clicks submit for short to long conversion
 	def convert_short
-		is_session_over_yes
+		session_timeout(5)
+		if is_session_over_yes == true
+			redirect_to users_new_user_path
+			return
+		end
 		short_to_long
 		@conv = Conversion.find_by(date: Date.today)
 
@@ -55,9 +70,10 @@ class UrlsController < ApplicationController
 	end
 
 	#api for short to long
+	#inp = GET  http://0.0.0.0:3000/urls/short_to_long?short=9sGKdAY
+	#out = {"long":"bulbasaur"}
 	def short_to_long
 		@req_ans = Url.find_long_url(params[:short])
-
 		if @req_ans == false
 			flash[:error] = "no such short url"
 			@conv = Conversion.find_by(date: Date.today)
@@ -68,9 +84,9 @@ class UrlsController < ApplicationController
 		end
 		if params[:action] == "convert_short"
 			flash[:error] = ""
-				return @req_ans
+			return @req_ans
 		else
-				render json: {"long" => @req_ans}
+			render json: {"long" => @req_ans}
 		end
 		
 	end

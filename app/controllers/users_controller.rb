@@ -5,7 +5,11 @@ class UsersController < ApplicationController
 
 	#starting pasge of the app , displays login page
 	def new_user
-		is_session_over_no
+		if is_session_over_no == true
+			redirect_to urls_new_path
+			return
+		end
+
 		#CounterInitWorker.perform_async
 		flash[:error] = ""
 		#session[:user] = "no"
@@ -13,7 +17,10 @@ class UsersController < ApplicationController
 
 	#signup page
 	def signup
-		is_session_over_no
+		if is_session_over_no == true
+			redirect_to urls_new_path
+			return
+		end
 		flash[:error] = ""
 	end
 
@@ -22,7 +29,6 @@ class UsersController < ApplicationController
 		#checks if any field is empty
 		if check_if_empty(params[:username] , params[:password]) == true
 			flash[:error] = "Field cannot be empty"
-			puts "empty"
   			render users_new_user_path
 			return
 		end
