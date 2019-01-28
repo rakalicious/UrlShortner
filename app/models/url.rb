@@ -34,7 +34,7 @@ class Url < ApplicationRecord
 
 	def self.shorten_url(long_url , long_domain)
 		number = 62
-		Rails.cache.clear
+		#Rails.cache.clear
 		@url_var = Url.find_by(long_url: long_url)
 		if @url_var == nil
 			short_domain = Url.find_short_domain(long_domain)
@@ -95,7 +95,7 @@ class Url < ApplicationRecord
 			#@domains.save
 			return @new_entry.short_domain
 		else
-			@short_domain = Rails.cache.fetch(long_domain , :expires_in => 5.minutes) do
+			@short_domain = Rails.cache.fetch(long_domain , :expires_in => 15.minutes) do
 
 				@domain_var.short_domain
 				end

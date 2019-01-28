@@ -1,9 +1,10 @@
 class UrlsController < ApplicationController
+	  skip_before_action :verify_authenticity_token
 	include UrlsHelper
 	require 'date'
 	require 'time'
 
-
+	
 
 	def new
 
@@ -16,8 +17,10 @@ class UrlsController < ApplicationController
 
 	def convert_long
 		is_session_over_yes
-		long_to_short
-		
+		r_val = long_to_short
+		#if r_val == false
+		#	return
+
 		@conv = Conversion.find_by(date: Date.today)
 
 		render 'urls/new'
@@ -38,7 +41,7 @@ class UrlsController < ApplicationController
 			flash[:error] = ""
 			return @req_ans
 		else
-			render json: {"short" => @req_ans}
+			render json: {"domain" => @req_ans.split("/").first , "short" => @req_ans.split("/").last}
 		end
 	end
 

@@ -24,8 +24,9 @@ class UsersController < ApplicationController
   			render users_new_user_path
 			return
 		end
+		login_status = User.try_login(login_params)
 
-		login_status = User.try_login(params[:username],params[:password])
+		#login_status = User.try_login(params[:username],params[:password])
 
 		if login_status == "wrong username"
 			flash[:error] = "Wrong username. Try Again"
@@ -40,6 +41,7 @@ class UsersController < ApplicationController
 		elsif login_status == "logged in"
 			session[:user] = "yes"
 			session[:time] = Time.now
+			flash[:error] = ""
 			#session[:time] = Time.now.strftime("%H:%M:%S")
   			redirect_to urls_new_path
   			return
@@ -73,7 +75,10 @@ class UsersController < ApplicationController
 		redirect_to users_new_user_path
 	end
 
+	private
+  def login_params
+    params.permit(:username, :password)
+  end
 
 end
-
 

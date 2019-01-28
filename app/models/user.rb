@@ -4,10 +4,10 @@ class User < ApplicationRecord
 	validates :email, presence: true
 	validates :name, presence: true
 
-	def self.try_login(username , password)
-		if User.find_by(username: username) == nil
+	def self.try_login(login_params)
+		if User.find_by(username: login_params[:username]) == nil
 			return "wrong username"
-		elsif User.find_by(username: username).password != password
+		elsif User.find_by(username: login_params[:username]).password != login_params[:password]
 			return "wrong password"
 		else
 			return "logged in"
