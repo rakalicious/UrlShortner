@@ -16,6 +16,7 @@ class Url < ApplicationRecord
 		CounterWorker.perform_async
 	end
 
+
 	def self.random_string_for_domain(number)
 		possible_domain = UrlsHelper.random_n_string(4,number)
 		while Domain.find_by(short_domain: possible_domain) != nil do
@@ -24,6 +25,7 @@ class Url < ApplicationRecord
 		return possible_domain
 	end
 
+
 	def self.random_string_for_url(number)
 		possible_short = UrlsHelper.random_n_string(7,number)
 		while Url.find_by(short_url: possible_short) != nil do
@@ -31,6 +33,8 @@ class Url < ApplicationRecord
 		end
 		return possible_short
 	end
+
+
 
 	def self.shorten_url(long_url , long_domain)
 		number = 62

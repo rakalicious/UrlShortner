@@ -14,14 +14,14 @@ class User < ApplicationRecord
 		end
 	end
 
-
-	def self.try_signup(username, password, email, fullname)
-		@users = User.create({:username => username , :password => password , :email => email , :name => fullname})
+ 
+	def self.try_signup(signup_params)
+		@users = User.create({:username => signup_params[:username] , :password => signup_params[:password] , :email => signup_params[:email] , :name => signup_params[:fullname]})
 		#@users.save
 	end
 
-	def self.check_username_available(username)
-		if User.find_by(username: username) == nil
+	def self.check_username_available(signup_params)
+		if User.find_by(username: signup_params[:username]) == nil
 			return true
 		end
 		return false

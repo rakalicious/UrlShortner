@@ -19,12 +19,15 @@ module UrlsHelper
   		return Array.new(number) { charset.sample }.join
 
 	end
+
+	#checks if session allowed time is over
 	def session_timeout(time)
 		if (Time.parse(DateTime.now.to_s) - Time.parse(session[:time].to_s))/60 > time
 			session[:user] = "no"
 		end
 	end
 
+	#if seesion got over then user is redirected to login page
 	def is_session_over_yes
 		if session[:user] == "no"
 			redirect_to users_new_user_path
