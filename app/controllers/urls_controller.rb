@@ -32,8 +32,10 @@ class UrlsController < ApplicationController
 	end
 
 	#api for long to short (POST)
-	#inp = POST  http://0.0.0.0:3000/urls/long_to_short?long=charmander&domain=www.youtube.com
+	#inp = POST  http://0.0.0.0:3000/urls/long_to_short ....... and in body    {"long" : "charmander" ,
+										# "domain" : "www.youtube.com"}
 	#out = {"domain":"bpGa","short":"CDdyqEG"}
+
 
 	def long_to_short
 		short_url = Url.shorten_url(params[:long] , params[:domain])
