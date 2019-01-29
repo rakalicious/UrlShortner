@@ -1,7 +1,6 @@
-	require 'elasticsearch/model'
-	require 'date'
-	require 'time'
-
+require 'elasticsearch/model'
+require 'date'
+require 'time'
 
 class Url < ApplicationRecord
 	include Elasticsearch::Model
@@ -11,14 +10,42 @@ class Url < ApplicationRecord
 	validates :long_url, presence: true
 	validates :short_url, presence: true
 	
-  	index_name('urls') 
-
+  #index_name('urls') 
+  settings index: {
+    number_of_shards: 1,
+    number_of_replicas: 0,
+    analysis: {
+      analyzer: {
+        trigram: {
+          tokenizer: 'trigram'
+        }
+      },
+      tokenizer: {
+        trigram: {
+          type: 'ngram',
+          min_gram: 3,
+          max_gram: 1000,
+          token_chars: ['letter', 'digit']
+        }
+      }
+    } } do
+    mapping do
+      indexes :short_url, type: 'text', analyzer: 'english' do
+      indexes :keyword, analyzer: 'keyword'
+      indexes :pattern, analyzer: 'pattern'
+      indexes :trigram, analyzer: 'trigram'
+    	end
+      indexes :long_url, type: 'text', analyzer: 'english' do
+      indexes :keyword, analyzer: 'keyword'
+      indexes :pattern, analyzer: 'pattern'
+      indexes :trigram, analyzer: 'trigram'
+    	end
+		end
+	end
 
 	def start
 		CounterWorker.perform_async
 	end
-
-	
 
 	def self.random_string_for_domain(number)
 		possible_domain = UrlsHelper.random_n_string(4,number)
@@ -28,7 +55,6 @@ class Url < ApplicationRecord
 		return possible_domain
 	end
 
-
 	def self.random_string_for_url(number)
 		possible_short = UrlsHelper.random_n_string(7,number)
 		while Url.find_by(short_url: possible_short) != nil do
@@ -36,8 +62,6 @@ class Url < ApplicationRecord
 		end
 		return possible_short
 	end
-
-
 
 	def self.shorten_url(long_url , long_domain)
 		number = 62
@@ -53,7 +77,6 @@ class Url < ApplicationRecord
 		else
 			short_domain = @url_var.short_domain
 			actual_domain = Domain.find_by(short_domain: short_domain).domain_name
-
 
 			if actual_domain != long_domain
 				return false
@@ -123,32 +146,21 @@ class Url < ApplicationRecord
 		end
 	end
 
-	#def self.search(query)
-  #__elasticsearch__.search(
-   # {
-    #  query: {
-     #   multi_match: {
-      #    query: query,
-       #   fields: ['long_url^10', 'short_url']
-       # }
- #     }
-  #  }
-#  )
-#end
-def self.search(query)
-		query="*"+query+"*"
-        __elasticsearch__.search(
-              {
-                query: {
-                    query_string: {
-                        query: query,
-                        default_field: 'long_url'
-
-                    }
-                }
-                }
-            )
-    end
-
+	def self.search(query)
+    field = "long_url"+".trigram"
+    urls = self.__elasticsearch__.search(
+    {
+      query: {
+        bool: {
+          must: [{
+            term: {
+              "#{field}":"#{query}"
+            }
+          }]
+        }
+      }
+    }).records
+    return urls
+  end
 
 end

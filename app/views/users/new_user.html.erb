@@ -4,17 +4,14 @@
     <center>
         Url Shortner
     </center>
-    
   </h1>
   <!-- <p>
     <% if @a == 5 %>
-  <%= javascript_tag "alert('hello welcome')" %>
-<% end %>
+      <%= javascript_tag "alert('hello welcome')" %>
+    <% end %>
   </p> -->
   <p>
     <center>
-
-
       <%= form.label :username %>
       <%= form.text_field :username %><br><br>
 
@@ -22,13 +19,11 @@
       <%= form.password_field :password %><br><br>
     
       <%= form.submit 'Login'%><br><br>
-          <%= link_to 'Signup', users_signup_path %><br><br>
-
-
+      <%= link_to 'Signup', users_signup_path %><br><br>
       <% flash.each do |key, value| %>
       <div class="alert alert-<%= key %>"><%= value %></div>
-    <% end %>
-    <%= yield %>
+      <% end %>
+      <%= yield %>
     </center>
   </p>
   

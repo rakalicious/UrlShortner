@@ -14,7 +14,6 @@ class User < ApplicationRecord
 		end
 	end
 
- 
 	def self.try_signup(signup_params)
 		@users = User.create({:username => signup_params[:username] , :password => signup_params[:password] , :email => signup_params[:email] , :name => signup_params[:fullname]})
 		#@users.save

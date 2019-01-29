@@ -6,7 +6,6 @@ class UrlsController < ApplicationController
 
 	def new
 		session_timeout(5)
-
 		if is_session_over_yes == true
 			redirect_to users_new_user_path
 			return
@@ -22,30 +21,25 @@ class UrlsController < ApplicationController
 			redirect_to users_new_user_path
 			return
 		end
-
-		r_val = long_to_short
-		#if r_val == false
-		#	return
+		long_to_short
 		@conv = Conversion.get_conv
-
 		render 'urls/new'
 	end
 
 	#api for long to short (POST)
-	#inp = POST  http://0.0.0.0:3000/urls/long_to_short?long=charmander&domain=www.youtube.com
+	#inp = POST  http://0.0.0.0:3000/urls/long_to_short ....... and in body    {"long" : "charmander" ,
+																			# "domain" : "www.youtube.com"}
 	#out = {"domain":"bpGa","short":"CDdyqEG"}
 
 	def long_to_short
 		short_url = Url.shorten_url(params[:long] , params[:domain])
 		@req_ans = short_url
-
 		if short_url == false
 			@req_ans = "something went wrong"
 			flash[:error] = "wrong domain"
 			return
 		end
 		#@req_ans = short_domain +"/"+ short_url
-		
 		if params[:action] == "convert_long"
 			flash[:error] = ""
 			return @req_ans
@@ -72,24 +66,21 @@ class UrlsController < ApplicationController
 	#out = {"long":"bulbasaur"}
 	def short_to_long
 		@req_ans = Url.find_long_url(params[:short])
-
 		if @req_ans == false
 			flash[:error] = "no such short url"
 			@conv = Conversion.get_conv
-
 			render urls_new_path
 			return
 		end
-
 		if params[:action] == "convert_short"
 			flash[:error] = ""
 			return @req_ans
 		else
 			render json: {"long" => @req_ans}
 		end
-		
 	end
 
+	#logout button
 	def logout
 		close_session
 	end

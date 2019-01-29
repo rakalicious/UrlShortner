@@ -9,10 +9,7 @@ class UsersController < ApplicationController
 			redirect_to urls_new_path
 			return
 		end
-
-		#CounterInitWorker.perform_async
 		flash[:error] = ""
-		#session[:user] = "no"
 	end
 
 	#signup page
@@ -32,11 +29,8 @@ class UsersController < ApplicationController
   			render users_new_user_path
 			return
 		end
-
 		login_status = User.try_login(login_params)
-
 		#login_status = User.try_login(params[:username],params[:password])
-
 		#3 conditions 
 		#1 - wrong username
 		if login_status == "wrong username"
@@ -56,11 +50,9 @@ class UsersController < ApplicationController
 			#session[:time] = Time.now.strftime("%H:%M:%S")
   			redirect_to urls_new_path
   			return
-
 		else
 			puts "something wrong"
 		end
-
 	end
 
 	#called when user clicks submit button on signup page
@@ -76,7 +68,6 @@ class UsersController < ApplicationController
 			flash[:error] = "Username not available"
 			render users_signup_path
 			return
-
 		end
 		#3 checks if both passwords entered is same
 		if check_password_match(signup_params) == false
@@ -84,20 +75,18 @@ class UsersController < ApplicationController
 			render users_signup_path
 			return
 		end
-
 		User.try_signup(signup_params)
 		redirect_to users_new_user_path
 	end
 
 	private
-  def login_params
-    params.permit(:username, :password)
-  end
+  	def login_params
+    	params.permit(:username, :password)
+  	end
 
-  def signup_params
-  	params.permit(:username , :password , :email , :fullname , :confirm_password)
-  end
-
-
+  	def signup_params
+  		params.permit(:username , :password , :email , :fullname , :confirm_password)
+  	end
+  	
 end
 

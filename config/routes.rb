@@ -15,7 +15,8 @@ Rails.application.routes.draw do
   post 'urls/long_to_short'
 
   root 'users#new_user'
-get '*path' => redirect('/')
+
   require 'sidekiq/web'	
+  get '*path' => redirect('/')
 mount Sidekiq::Web, :at => '/sidekiq'
 end

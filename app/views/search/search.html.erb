@@ -1,13 +1,16 @@
-<h1>Articles Search</h1>
-<%= link_to 'back', urls_new_path %>
-<%= form_for search_path, method: :get do |f| %>
-  <p>
-    <%= f.label "Search for" %>
-    <%= text_field_tag :q, params[:q] %>
+<h1>
+  Articles Search
+</h1>
+<p>
+  <%= link_to 'back', urls_new_path %>
+  <%= form_for search_path, method: :get do |f| %>
+  
+  <%= f.label "Search for" %> 
+  <%= text_field_tag :q, params[:q] %>
     
-    <%= submit_tag "Go", name: nil %>
-  </p>
-<% end %>
+  <%= submit_tag "Go", name: nil %>
+  <% end %>
+</p>
 
 <ul>
   <% @urls.each do |url| %>

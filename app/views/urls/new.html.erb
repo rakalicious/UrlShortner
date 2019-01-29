@@ -2,38 +2,37 @@
 <%= link_to 'Logout', urls_logout_path %>
 <br><br>
 <%= link_to 'Search', search_path %><br><br>
-<%= form_with url: urls_convert_long_path do |form| %>
+
   <p>
     <center>
-      
-    <%= form.label :domain %>
+      <%= form_with url: urls_convert_long_path do |form| %>
+      <%= form.label :domain %>
       <%= form.text_field :domain %>
 
       <%= form.label :full_url %>
       <%= form.text_field :long %>
 
-     <%= form.submit 'Long to Short'%><br><br>
-  <% end %>
-  <%= form_with url: urls_convert_short_path do |form| %>
+      <%= form.submit 'Long to Short'%><br><br>
+      <% end %>
 
+      <%= form_with url: urls_convert_short_path do |form| %>
       <%= form.label :short_url %>
       <%= form.text_field :short %>
-    <%= form.submit 'Short to Long'%><br><br><br>
+      <%= form.submit 'Short to Long'%><br><br><br>
 
-    <% pika = @req_ans %><br><br>
-    <% c = 0 %>
-    <% if @conv != nil %>
-    <% c = @conv.count %>
-    <% end %>
+      <% pika = @req_ans %><br><br>
+      <% c = 0 %>
+      <% if @conv != nil %>
+      <% c = @conv.count %>
+      <% end %>
     
-    <%= form.label "Today Count = #{c}" %><br><br>
+      <%= form.label "Today Count = #{c}" %><br><br>
+      <%= form.label :Output ,"#{pika}" %><br><br>
 
-    <%= form.label :Output ,"#{pika}" %><br><br>
-
-    <% flash.each do |key, value| %>
+      <% flash.each do |key, value| %>
       <div class="alert alert-<%= key %>"><%= value %></div>
-    <% end %>
-    <%= yield %>
+      <% end %>
+      <%= yield %>
     
     </center>
   </p>
