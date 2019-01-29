@@ -5,7 +5,6 @@ class UrlsController < ApplicationController
 	require 'time'
 
 	def new
-
 		session_timeout(5)
 
 		if is_session_over_yes == true
@@ -27,7 +26,6 @@ class UrlsController < ApplicationController
 		r_val = long_to_short
 		#if r_val == false
 		#	return
-
 		@conv = Conversion.get_conv
 
 		render 'urls/new'
@@ -39,8 +37,8 @@ class UrlsController < ApplicationController
 
 	def long_to_short
 		short_url = Url.shorten_url(params[:long] , params[:domain])
-		puts short_url
 		@req_ans = short_url
+
 		if short_url == false
 			@req_ans = "something went wrong"
 			flash[:error] = "wrong domain"
@@ -74,14 +72,15 @@ class UrlsController < ApplicationController
 	#out = {"long":"bulbasaur"}
 	def short_to_long
 		@req_ans = Url.find_long_url(params[:short])
+
 		if @req_ans == false
 			flash[:error] = "no such short url"
 			@conv = Conversion.get_conv
 
 			render urls_new_path
-
 			return
 		end
+
 		if params[:action] == "convert_short"
 			flash[:error] = ""
 			return @req_ans

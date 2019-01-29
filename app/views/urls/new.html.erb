@@ -13,8 +13,8 @@
       <%= form.text_field :long %>
 
      <%= form.submit 'Long to Short'%><br><br>
-<% end %>
-<%= form_with url: urls_convert_short_path do |form| %>
+  <% end %>
+  <%= form_with url: urls_convert_short_path do |form| %>
 
       <%= form.label :short_url %>
       <%= form.text_field :short %>
@@ -23,12 +23,10 @@
     <% pika = @req_ans %><br><br>
     <% c = 0 %>
     <% if @conv != nil %>
-    <% #c = 0 %>
-    <% #else %>
     <% c = @conv.count %>
     <% end %>
     
-      <%= form.label "Count = #{c}" %><br><br>
+    <%= form.label "Today Count = #{c}" %><br><br>
 
     <%= form.label :Output ,"#{pika}" %><br><br>
 
