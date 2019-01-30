@@ -11,7 +11,6 @@ class UrlsController < ApplicationController
 			return
 		end
 		@conv = Conversion.get_conv
-		#@conv = Conversion.find_by(date: Date.today)
 	end
 
 =begin
@@ -35,18 +34,9 @@ out = {"domain":"bpGa","short":"CDdyqEG"}
 =end
 	def long_to_short
 		domain_name = DomainsHelper.get_domain_from_url(params[:long])
-		#short_url = Url.shorten_url(params[:long] , params[:domain])
-		short_url = Url.shorten_url(params[:long] , domain_name)
-		@req_ans = short_url
-		if short_url == false
-			@req_ans = "something went wrong"
-			flash[:error] = "wrong domain"
-			return
-		end
-		#@req_ans = short_domain +"/"+ short_url
+		@req_ans = Url.shorten_url(params[:long] , domain_name)
 		if params[:action] == "convert_long"
 			flash[:error] = ""
-			return @req_ans
 		else
 			render json: {"domain" => @req_ans.split("/").first , "short" => @req_ans.split("/").last}
 		end
@@ -60,12 +50,8 @@ called when user clicks submit for short to long conversion
 			redirect_to users_new_user_path
 			return
 		end
-		if short_to_long == false
-			return
-		end
-
+		short_to_long
 		@conv = Conversion.get_conv
-
 		render 'urls/new'
 	end
 =begin
@@ -83,12 +69,10 @@ out = {"long":"bulbasaur"}
 			flash[:error] = "no such short url"
 			@req_ans = ""
 			@conv = Conversion.get_conv
-			render urls_new_path
-			return false
+			return
 		end
 		if params[:action] == "convert_short"
 			flash[:error] = ""
-			return @req_ans
 		else
 			render json: {"long" => @req_ans}
 		end

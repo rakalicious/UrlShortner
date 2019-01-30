@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+	require 'digest/md5'
+
 	validates :username, presence: true
 	validates :password, presence: true 
 	validates :email, presence: true
@@ -7,9 +9,10 @@ class User < ApplicationRecord
 login using given values
 =end
 	def self.try_login(login_params)
+		md5_password = Digest::MD5.hexdigest(login_params[:password])
 		if User.find_by(username: login_params[:username]) == nil
 			return "wrong username"
-		elsif User.find_by(username: login_params[:username]).password != login_params[:password]
+		elsif User.find_by(username: login_params[:username]).password != md5_password
 			return "wrong password"
 		else
 			return "logged in"
@@ -19,7 +22,8 @@ login using given values
 signup using given values
 =end
 	def self.try_signup(signup_params)
-		users = User.create({:username => signup_params[:username] , :password => signup_params[:password] , :email => signup_params[:email] , :name => signup_params[:fullname]})
+		md5_password = Digest::MD5.hexdigest(signup_params[:password])
+		users = User.create({:username => signup_params[:username] , :password => md5_password , :email => signup_params[:email] , :name => signup_params[:fullname]})
 		#users.save
 	end
 

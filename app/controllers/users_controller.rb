@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-
 	include UsersHelper
 	require 'time'
 
@@ -53,8 +52,6 @@ called when user clicks submit button on login form
 			flash[:error] = ""
   			redirect_to urls_new_path
   			return
-		else
-			puts "something wrong"
 		end
 	end
 =begin

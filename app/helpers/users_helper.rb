@@ -1,5 +1,5 @@
 module UsersHelper
-
+require 'digest/md5'
 =begin
 checks fields if they are empty
 =end
@@ -13,8 +13,14 @@ checks fields if they are empty
 		end
 	end
 
+=begin
+password match in signup
+=end
 	def check_password_match(signup_params)
-		if signup_params[:password] == signup_params[:confirm_password]
+		md5_password = Digest::MD5.hexdigest(signup_params[:password])
+		md5_confirm_password = Digest::MD5.hexdigest(signup_params[:confirm_password])
+
+		if md5_password == md5_confirm_password
 			return true
 		end
 			return false
