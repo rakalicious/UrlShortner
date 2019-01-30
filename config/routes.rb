@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'urls/new'
   get 'urls/logout'
   get 'urls/short_to_long'
+  get 'domains/new'
 
   post 'users/username_available'
   post 'users/signup_entry'
@@ -13,6 +14,7 @@ Rails.application.routes.draw do
   post 'urls/convert_long'
   post 'urls/convert_short'
   post 'urls/long_to_short'
+  post 'domains/create_domain'
 
   root 'users#new_user'
 

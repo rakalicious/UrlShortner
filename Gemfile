@@ -32,7 +32,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
 gem 'jquery-ui-rails'
-
+gem 'normalize_url'
+gem 'domainatrix'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

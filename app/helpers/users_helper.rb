@@ -1,6 +1,8 @@
 module UsersHelper
 
-	#checks fields if they are empty
+=begin
+checks fields if they are empty
+=end
 	def check_if_empty(*args) 
 		for i in args
 			puts i
@@ -17,8 +19,9 @@ module UsersHelper
 		end
 			return false
 	end
-
-	#if session is not over then redirects user to login page else keeps on current page
+=begin
+if session is not over then redirects user to login page else keeps on current page
+=end
 	def is_session_over_no
 		if session[:user] == "yes"
 			return true

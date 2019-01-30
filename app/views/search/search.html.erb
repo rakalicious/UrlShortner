@@ -1,10 +1,12 @@
 <h1>
-  Articles Search
+  Urls Search
 </h1>
 <p>
   <%= link_to 'back', urls_new_path %>
   <%= form_for search_path, method: :get do |f| %>
-  
+  <h4>
+    input atleast 3 letters
+  </h4>
   <%= f.label "Search for" %> 
   <%= text_field_tag :q, params[:q] %>
     
