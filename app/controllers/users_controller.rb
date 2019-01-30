@@ -7,8 +7,6 @@ class UsersController < ApplicationController
 starting pasge of the app , displays login page
 =end
 	def new_user
-		#puts NormalizeUrl.process("www.youtube.com/charizard")
-   		#puts (Domainatrix.parse("http:www.youtube.com/")).domain
 		if is_session_over_no == true
 			redirect_to urls_new_path
 			return
@@ -53,7 +51,6 @@ called when user clicks submit button on login form
 			session[:user] = "yes"
 			session[:time] = Time.now
 			flash[:error] = ""
-			#session[:time] = Time.now.strftime("%H:%M:%S")
   			redirect_to urls_new_path
   			return
 		else
@@ -65,7 +62,7 @@ called when user clicks submit button on signup page
 =end
 	def signup_entry
 		#1 - checks if field is empty
-		if check_if_empty(params[:username], params[:password], params[:email], params[:fullname], params[:confirm_password]) == true
+		if check_if_empty(signup_params[:username], signup_params[:password], signup_params[:email], signup_params[:fullname], signup_params[:confirm_password]) == true
 			flash[:error] = "empty field not allowed"
 			render users_signup_path
 			return

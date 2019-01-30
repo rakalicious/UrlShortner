@@ -2,7 +2,9 @@ class DomainsController < ApplicationController
 	def new
 
 	end
-
+=begin
+enter new domain details by admin
+=end
 	def create_domain
 		flash[:error] = ""
 		response = Domain.new_domain_entry(params[:domain_name] , params[:short_domain])

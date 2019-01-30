@@ -18,7 +18,7 @@
   <% @urls.each do |url| %>
     <li>
       <h3>
-        <%= link_to (url.short_url + " : " + url.long_url), controller: "urls", action: "new"%>
+        <%= link_to (url.short_domain + "/" + url.short_url + " : " + url.long_url), controller: "urls", action: "new"%>
       </h3>
     </li>
   <% end %>

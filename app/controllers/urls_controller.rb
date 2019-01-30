@@ -29,14 +29,11 @@ called when user clicks submit for long to short conversion
 	end
 =begin
 api for long to short (POST)
-inp = POST  http://0.0.0.0:3000/urls/long_to_short ....... and in body    {"long" : "charmander" ,
-																		# "domain" : "www.youtube.com"}
+inp = POST  http://0.0.0.0:3000/urls/long_to_short ....... and in body    {"long" : "www.youtube.com/charmander" ,
+																		# "domain" : "youtube"}
 out = {"domain":"bpGa","short":"CDdyqEG"}
 =end
 	def long_to_short
-		#if domain_name.start_with?("")
-		#domain_name = (Domainatrix.parse(params[:long])).domain
-
 		domain_name = DomainsHelper.get_domain_from_url(params[:long])
 		#short_url = Url.shorten_url(params[:long] , params[:domain])
 		short_url = Url.shorten_url(params[:long] , domain_name)
@@ -73,11 +70,15 @@ called when user clicks submit for short to long conversion
 	end
 =begin
 api for short to long
-inp = GET  http://0.0.0.0:3000/urls/short_to_long?short=9sGKdAY
+inp = GET  http://0.0.0.0:3000/urls/short_to_long?short=47FbPzI
 out = {"long":"bulbasaur"}
 =end
 	def short_to_long
-		@req_ans = Url.find_long_url(params[:short])
+		short_inp = params[:short]
+		if short_inp.include? "/"
+			short_inp = short_inp.split("/").second
+		end
+		@req_ans = Url.find_long_url(short_inp)
 		if @req_ans == false
 			flash[:error] = "no such short url"
 			@req_ans = ""
