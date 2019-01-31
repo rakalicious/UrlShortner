@@ -17,14 +17,6 @@ generate nbit random string of length num
     return Array.new(number) { charset.sample }.join
   end
 
-=begin
-#if seesion got over then user is redirected to login page
-=end
-  def is_session_over_yes
-	  if session[:user] == "no"
-	    return true
-	  end
-  end
 
 =begin
 close the session

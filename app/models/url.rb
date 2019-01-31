@@ -34,14 +34,14 @@ class Url < ApplicationRecord
       indexes :keyword, analyzer: 'keyword'
       indexes :pattern, analyzer: 'pattern'
       indexes :trigram, analyzer: 'trigram'
-    	end
+    	  end
       indexes :long_url, type: 'text', analyzer: 'english' do
       indexes :keyword, analyzer: 'keyword'
       indexes :pattern, analyzer: 'pattern'
       indexes :trigram, analyzer: 'trigram'
-    	end
-		end
-	end
+    	  end
+		  end
+	  end
 
 =begin
 async counter for number of new short urls created

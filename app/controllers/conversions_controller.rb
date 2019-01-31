@@ -1,6 +1,8 @@
 class ConversionsController < ApplicationController
-	def index
-		@conversion = Conversion.all
-	end
-	
+  before_action :is_session_over_no, only: []
+  before_action :is_session_over_yes, only: [:index]
+  
+  def index
+    @conversion = Conversion.all
+  end  
 end

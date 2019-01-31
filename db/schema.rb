@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_31_050937) do
+ActiveRecord::Schema.define(version: 2019_01_31_064145) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2019_01_31_050937) do
     t.integer "count"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["date"], name: "index_conversions_on_date", unique: true
   end
 
   create_table "domains", force: :cascade do |t|
@@ -27,6 +28,8 @@ ActiveRecord::Schema.define(version: 2019_01_31_050937) do
     t.string "short_domain"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["domain_name"], name: "index_domains_on_domain_name", unique: true
+    t.index ["short_domain"], name: "index_domains_on_short_domain", unique: true
   end
 
   create_table "urls", force: :cascade do |t|
@@ -34,6 +37,8 @@ ActiveRecord::Schema.define(version: 2019_01_31_050937) do
     t.string "short_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["long_url"], name: "index_urls_on_long_url", unique: true
+    t.index ["short_url"], name: "index_urls_on_short_url", unique: true
   end
 
   create_table "users", force: :cascade do |t|
@@ -43,6 +48,7 @@ ActiveRecord::Schema.define(version: 2019_01_31_050937) do
     t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["username"], name: "index_users_on_username", unique: true
   end
 
 end
