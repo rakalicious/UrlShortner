@@ -23,10 +23,10 @@ out = {"short_domain": "yt.ub",
     respond_to do |format|
       if @req_ans == false
         @req_ans = ""
+        puts "yahan wahan"
         flash.now[:error] = "Domain not registered"
         format.html {render 'urls/new'}
         format.json {render json: {"error" => "Domain not registered"}, status: :not_found}
-        return
       end
 
       format.html {render 'urls/new'}
@@ -47,13 +47,11 @@ out = {"long_url":"www.youtube.com/ninetails"}
     @req_ans = Url.find_long_url(short_inp)
     respond_to do |format|
       if @req_ans == false
-        flash.now[:error] = "no such short url"
         @req_ans = ""
+        flash.now[:error] = "no such short url"
         format.html {render 'urls/new'}
-        format.json {render json: {"error" => "Domain not registered"}, status: :not_found}
-        return
+        format.json {render json: {"error" => "Short url does not exist"}, status: :not_found}
       end
-      puts @req_ans
       format.html {render 'urls/new'}
       format.json { render json: {"long_url" => @req_ans}, status: :ok}
     end

@@ -12,11 +12,10 @@ module UrlsHelper
 =begin
 generate nbit random string of length num
 =end
-  def self.random_62bit_string(number) 
+  def self.random_62bit_string
     charset = Array('A'..'Z') + Array('a'..'z') + Array('0'..'9')
-    return Array.new(number) { charset.sample }.join
+    return Array.new(ApplicationController::RANDOM_STRING_LENGTH) { charset.sample }.join
   end
-
 
 =begin
 close the session
