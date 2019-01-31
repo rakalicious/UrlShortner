@@ -12,7 +12,7 @@ login using given values
 		else
 			return "wrong username or password"
 		end
-	end
+	end 
 =begin
 signup using given values
 =end
@@ -31,5 +31,13 @@ check if username is available
 		end
 		return true
 	end
-
+=begin
+check if email is available
+=end
+  def self.check_email_available(signup_params)
+    if User.find_by(email: signup_params[:email])
+      return false
+    end
+    return true
+  end
 end

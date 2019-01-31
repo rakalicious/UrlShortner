@@ -13,7 +13,7 @@ checks fields if they are empty
 	end
 
 =begin
-password match in signup
+password match in signup 
 =end
 	def check_password_match(signup_params)
 		md5_password = Digest::MD5.hexdigest(signup_params[:password])

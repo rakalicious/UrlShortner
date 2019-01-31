@@ -7,7 +7,7 @@ module UrlsHelper
       end
     end
     return false
-  end  
+  end   
 
 =begin
 generate nbit random string of length num
@@ -16,14 +16,7 @@ generate nbit random string of length num
     charset = Array('A'..'Z') + Array('a'..'z') + Array('0'..'9')
     return Array.new(number) { charset.sample }.join
   end
-=begin
-checks if session allowed time is over
-=end
-  def session_timeout(time)
-    if (Time.parse(DateTime.now.to_s) - Time.parse(session[:time].to_s))/60 > time
-      session[:user] = "no"
-    end
-  end
+
 =begin
 #if seesion got over then user is redirected to login page
 =end

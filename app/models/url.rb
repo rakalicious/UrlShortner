@@ -9,7 +9,7 @@ class Url < ApplicationRecord
 
 	validates :long_url , :short_url, presence: true
 	#validates :short_url, presence: true
-	
+	 
   #index_name('urls') 
   settings index: {
     number_of_shards: 1,
@@ -67,30 +67,17 @@ find the short url , given the long url and thge short url
 	def self.shorten_url(long_url , long_domain)
 		#Rails.cache.clear
     number = 7
-		url_var = Url.find_by(long_url: long_url)
-    dom = Domain.find_by(domain_name: long_domain)
-		if url_var
-      return (dom ) + "/" + (url_var.short_url)
+    domain_var = Domain.find_by(domain_name: long_domain)
+    if !domain_var
+      return false
+    end
+    long_url_var = Url.find_by(long_url: long_url)
+		if long_url_var
+      return (domain_var.short_domain) + "/" + (long_url_var.short_url)
 		else
-			short_domain = Url.find_short_domain(long_domain)
       possible_short = Url.random_string_for_url(number)
       Url.create({:long_url => long_url, :short_url => possible_short })
-      return (short_domain)+"/"+(possible_short)
-		end
-	end
-
-=begin
-find the short domain , given the long domain from the given url (admin version)
-=end
-	def self.find_short_domain(long_domain)
-		domain_var = Domain.find_by(domain_name: long_domain)
-		if domain_var
-			return domain_var.short_domain
-		else
-      short_domain = Rails.cache.fetch(long_domain , :expires_in => 15.minutes) do
-        Domain.find_by(domain_name: "default")
-      end
-      return short_domain.short_domain
+      return (domain_var.short_domain)+"/"+(possible_short)
 		end
 	end
 

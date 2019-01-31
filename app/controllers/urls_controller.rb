@@ -3,9 +3,9 @@ class UrlsController < ApplicationController
 	include UrlsHelper
 	require 'date'
 	require 'time'
-
+ 
 	def new
-		session_timeout(10)
+		#session_timeout(10)
 		if is_session_over_yes == true
 			redirect_to users_new_user_path
 			return
@@ -16,12 +16,15 @@ class UrlsController < ApplicationController
 called when user clicks submit for long to short conversion
 =end
 	def convert_long
-		session_timeout(10)
+		#session_timeout(10)
 		if is_session_over_yes == true
 			redirect_to users_new_user_path
 			return
 		end
-		long_to_short
+		if long_to_short == false
+			@req_ans = ""
+			flash.now[:error] = "Domain not registered"
+		end
 		render 'urls/new'
 	end
 =begin
@@ -33,6 +36,9 @@ out = {"domain":"bpGa","short":"CDdyqEG"}
 	def long_to_short
 		domain_name = DomainsHelper.get_domain_name_from_url(params[:long_url_inp])
 		@req_ans = Url.shorten_url(params[:long_url_inp] , domain_name)
+		if @req_ans == false
+			return false
+		end
 		if params[:action] == "convert_long"
 			return
 		else
@@ -43,7 +49,7 @@ out = {"domain":"bpGa","short":"CDdyqEG"}
 called when user clicks submit for short to long conversion
 =end
 	def convert_short
-		session_timeout(10)
+		#session_timeout(10)
 		if is_session_over_yes == true
 			redirect_to users_new_user_path
 			return

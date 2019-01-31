@@ -56,6 +56,11 @@ called when user clicks submit button on signup page
 			render users_signup_path
 			return
 		end
+		if User.check_email_available(signup_params) == false
+			flash.now[:error] = "Email alredy registered"
+			render users_signup_path
+			return
+		end
 		if check_password_match(signup_params) == false
 			flash.now[:error] = "password dont match"
 			render users_signup_path
