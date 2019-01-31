@@ -10,7 +10,6 @@ class UrlsController < ApplicationController
 			redirect_to users_new_user_path
 			return
 		end
-		@conv = Conversion.get_conv
 	end
 
 =begin
@@ -23,7 +22,6 @@ called when user clicks submit for long to short conversion
 			return
 		end
 		long_to_short
-		@conv = Conversion.get_conv
 		render 'urls/new'
 	end
 =begin
@@ -33,10 +31,10 @@ inp = POST  http://0.0.0.0:3000/urls/long_to_short ....... and in body    {"long
 out = {"domain":"bpGa","short":"CDdyqEG"}
 =end
 	def long_to_short
-		domain_name = DomainsHelper.get_domain_from_url(params[:long])
-		@req_ans = Url.shorten_url(params[:long] , domain_name)
+		domain_name = DomainsHelper.get_domain_name_from_url(params[:long_url_inp])
+		@req_ans = Url.shorten_url(params[:long_url_inp] , domain_name)
 		if params[:action] == "convert_long"
-			flash[:error] = ""
+			return
 		else
 			render json: {"domain" => @req_ans.split("/").first , "short" => @req_ans.split("/").last}
 		end
@@ -51,7 +49,6 @@ called when user clicks submit for short to long conversion
 			return
 		end
 		short_to_long
-		@conv = Conversion.get_conv
 		render 'urls/new'
 	end
 =begin
@@ -60,19 +57,18 @@ inp = GET  http://0.0.0.0:3000/urls/short_to_long?short=47FbPzI
 out = {"long":"bulbasaur"}
 =end
 	def short_to_long
-		short_inp = params[:short]
+		short_inp = params[:short_url_inp]
 		if short_inp.include? "/"
 			short_inp = short_inp.split("/").second
 		end
 		@req_ans = Url.find_long_url(short_inp)
 		if @req_ans == false
-			flash[:error] = "no such short url"
+			flash.now[:error] = "no such short url"
 			@req_ans = ""
-			@conv = Conversion.get_conv
 			return
 		end
 		if params[:action] == "convert_short"
-			flash[:error] = ""
+			return
 		else
 			render json: {"long" => @req_ans}
 		end
@@ -83,5 +79,10 @@ logout button
 	def logout
 		close_session
 	end
+
+	private
+  	def url_params
+    	params.permit(:short_url_inp , :long_url_inp)
+  	end
 	
 end

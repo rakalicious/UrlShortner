@@ -1,5 +1,5 @@
 class ConversionsController < ApplicationController
-	def show
+	def index
 		@conversion = Conversion.all
 	end
 	

@@ -4,11 +4,11 @@ require 'time'
 
 class Url < ApplicationRecord
 	include Elasticsearch::Model
-  	include Elasticsearch::Model::Callbacks
-	after_create :start
+  include Elasticsearch::Model::Callbacks
+	after_create :start_async_counter
 
-	validates :long_url, presence: true
-	validates :short_url, presence: true
+	validates :long_url , :short_url, presence: true
+	#validates :short_url, presence: true
 	
   #index_name('urls') 
   settings index: {
@@ -46,7 +46,7 @@ class Url < ApplicationRecord
 =begin
 async counter for number of new short urls created
 =end
-	def start
+	def start_async_counter
 		CounterWorker.perform_async
 	end
 
@@ -54,9 +54,9 @@ async counter for number of new short urls created
 generate random string of specified bit for url
 =end
 	def self.random_string_for_url(number)
-		possible_short = UrlsHelper.random_n_string(7,number)
+		possible_short = UrlsHelper.random_62bit_string(number)
 		while Url.find_by(short_url: possible_short) != nil do
-			possible_short = UrlsHelper.random_n_string(7,number)
+			possible_short = UrlsHelper.random_62bit_string(number)
 		end
 		return possible_short
 	end
@@ -65,52 +65,51 @@ generate random string of specified bit for url
 find the short url , given the long url and thge short url
 =end
 	def self.shorten_url(long_url , long_domain)
-		number = 62
 		#Rails.cache.clear
+    number = 7
 		url_var = Url.find_by(long_url: long_url)
-		if url_var == nil
-			short_domain = Url.find_short_domain_admin(long_domain)
-			possible_short = Url.random_string_for_url(number)
-			new_entry = Url.create({:long_url => long_url, :short_url => possible_short , :short_domain => short_domain})
-			return (short_domain)+"/"+(new_entry.short_url)
+    dom = Domain.find_by(domain_name: long_domain)
+		if url_var
+      return (dom ) + "/" + (url_var.short_url)
 		else
-			short_url = Rails.cache.fetch(long_url , :expires_in => 5.minutes) do
-				a = (url_var.short_domain )
-				b = (url_var.short_url)
-				a + "/" + b
-				end
-			return short_url
+			short_domain = Url.find_short_domain(long_domain)
+      possible_short = Url.random_string_for_url(number)
+      Url.create({:long_url => long_url, :short_url => possible_short })
+      return (short_domain)+"/"+(possible_short)
 		end
-
 	end
 
 =begin
 find the short domain , given the long domain from the given url (admin version)
 =end
-	def self.find_short_domain_admin(long_domain)
+	def self.find_short_domain(long_domain)
 		domain_var = Domain.find_by(domain_name: long_domain)
-		if domain_var == nil
-			short_domain = Rails.cache.fetch(long_domain , :expires_in => 15.minutes) do
-				Domain.find_by(domain_name: "default")
-			end
-			return short_domain.short_domain
-		else
+		if domain_var
 			return domain_var.short_domain
+		else
+      short_domain = Rails.cache.fetch(long_domain , :expires_in => 15.minutes) do
+        Domain.find_by(domain_name: "default")
+      end
+      return short_domain.short_domain
 		end
-		
 	end
 
 =begin
 find long url given short url
 =end
 	def self.find_long_url(short_url)
-		if Url.find_by(short_url: short_url) == nil
-			return false
-		else
-			long_url = Rails.cache.fetch(short_url , :expires_in => 5.minutes) do
-				Url.where(short_url: short_url).first.long_url
-			end
+		long_url = Rails.cache.fetch(short_url , :expires_in => 5.minutes)
+		if long_url
 			return long_url
+		end
+    long_url_var = Url.find_by(short_url: short_url)
+		if long_url_var
+			long_url = Rails.cache.fetch(short_url , :expires_in => 5.minutes) do
+        long_url_var.long_url
+      end
+      return long_url
+		else
+      return false
 		end
 	end
 

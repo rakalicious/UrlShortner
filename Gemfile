@@ -34,6 +34,7 @@ gem 'elasticsearch-rails'
 gem 'jquery-ui-rails'
 gem 'normalize_url'
 gem 'domainatrix'
+gem 'awesome_print', require: 'ap'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

@@ -1,27 +1,22 @@
 class User < ApplicationRecord
 	require 'digest/md5'
 
-	validates :username, presence: true
-	validates :password, presence: true 
-	validates :email, presence: true
-	validates :name, presence: true
+	validates :username, :password ,:email ,:name ,presence: true
 =begin
 login using given values
 =end
-	def self.try_login(login_params)
-		md5_password = Digest::MD5.hexdigest(login_params[:password])
-		if User.find_by(username: login_params[:username]) == nil
-			return "wrong username"
-		elsif User.find_by(username: login_params[:username]).password != md5_password
-			return "wrong password"
-		else
+	def self.login_using_credentials(login_params)
+	  md5_password = Digest::MD5.hexdigest(login_params[:password])
+		if User.find_by(username: login_params[:username] , password: md5_password)
 			return "logged in"
+		else
+			return "wrong username or password"
 		end
 	end
 =begin
 signup using given values
 =end
-	def self.try_signup(signup_params)
+	def self.signup_using_credentials(signup_params)
 		md5_password = Digest::MD5.hexdigest(signup_params[:password])
 		users = User.create({:username => signup_params[:username] , :password => md5_password , :email => signup_params[:email] , :name => signup_params[:fullname]})
 		#users.save
@@ -31,10 +26,10 @@ signup using given values
 check if username is available
 =end
 	def self.check_username_available(signup_params)
-		if User.find_by(username: signup_params[:username]) == nil
-			return true
+		if User.find_by(username: signup_params[:username])
+			return false
 		end
-		return false
+		return true
 	end
 
 end

@@ -3,14 +3,13 @@ require 'digest/md5'
 =begin
 checks fields if they are empty
 =end
-	def check_if_empty(*args) 
-		for i in args
-			puts i
-			if i == ""
+	def check_if_empty(allowed_params) 
+		for i in allowed_params.keys
+			if allowed_params[i] == ""
 				return true
 			end
-			return false
 		end
+		return false
 	end
 
 =begin

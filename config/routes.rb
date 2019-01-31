@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get 'urls/logout'
   get 'urls/short_to_long'
   get 'domains/new'
-  get 'conversions/show'
+  get 'conversions/index'
 
   post 'users/username_available'
   post 'users/signup_entry'

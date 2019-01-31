@@ -17045,3 +17045,2330 @@ Processing by UrlsController#convert_short as HTML
 Completed 200 OK in 30ms (Views: 22.2ms | ActiveRecord: 1.7ms)
 
 
+Started POST "/urls/convert_long" for 127.0.0.1 at 2019-01-30 15:55:25 +0530
+Processing by UrlsController#convert_long as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2y9fLGkyd8qI2hCI/Fc7F+p7AC2XFQTsn9LO2TozfRQMEWc+EV9m8W0mVfwnVIuA5jOOq9i9Ltmhk7yOdAqKpA==", "long"=>"www.youtube.com/charizard", "commit"=>"Long to Short"}
+  [1m[36mConversion Load (0.4ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-30"], ["LIMIT", 1]]
+  ↳ app/models/conversion.rb:9
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 130ms (Views: 57.1ms | ActiveRecord: 6.6ms)
+
+
+Started POST "/urls/convert_short" for 127.0.0.1 at 2019-01-30 15:55:29 +0530
+Processing by UrlsController#convert_short as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"40GTMm9SGC/nO5uqG++YQGf2PWQaUI399MXMhA+9vaA4L8B6Ylj4vJBOj8acB28IG+/P62iZABoyZ2v3qNOwMg==", "short"=>"yt.ub/OQMigkU", "commit"=>"Short to Long"}
+  [1m[36mUrl Load (0.5ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = $1 LIMIT $2[0m  [["short_url", "OQMigkU"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:115
+  [1m[36mUrl Load (0.5ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = $1 ORDER BY "urls"."id" ASC LIMIT $2[0m  [["short_url", "OQMigkU"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:119
+  [1m[36mConversion Load (0.5ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-30"], ["LIMIT", 1]]
+  ↳ app/models/conversion.rb:9
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 44ms (Views: 17.6ms | ActiveRecord: 3.7ms)
+
+
+Started POST "/urls/convert_long" for 127.0.0.1 at 2019-01-30 15:56:10 +0530
+Processing by UrlsController#convert_long as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mBAZEglRkvuzsuTlAHa3keMI6HrLaFV+FErRiXVJnx1PLiEAcTyDwFZOoZHbdQcG70Bm/ITAf0sqC6PeO3BorQ==", "long"=>"www.youtube.com/charizard", "commit"=>"Long to Short"}
+  [1m[36mConversion Load (0.3ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-30"], ["LIMIT", 1]]
+  ↳ app/models/conversion.rb:9
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 31ms (Views: 7.0ms | ActiveRecord: 6.5ms)
+
+
+Started POST "/urls/convert_short" for 127.0.0.1 at 2019-01-30 15:56:17 +0530
+Processing by UrlsController#convert_short as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0EY+2X//zSIUESxguVsnqwfY8ivGIUXXMmwc5tg5y7kLKG2RcvUtsWNkOAw+s9Dje8EApLToyDD0zruVf1fGKw==", "short"=>"OQMigkU", "commit"=>"Short to Long"}
+  [1m[36mConversion Load (0.4ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-30"], ["LIMIT", 1]]
+  ↳ app/models/conversion.rb:9
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 11ms (Views: 7.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/urls/convert_short" for 127.0.0.1 at 2019-01-30 15:56:23 +0530
+Processing by UrlsController#convert_short as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/mwiaMdee/+SHzKqhZ+FCf1DeMbGUnoBvMF/ttziWIAlAnEgylSbbOVqJsYCd3JBgVqKSbSb9+Z6Y9jFe4xVEg==", "short"=>"OQMigkU", "commit"=>"Short to Long"}
+  [1m[36mConversion Load (0.4ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-30"], ["LIMIT", 1]]
+  ↳ app/models/conversion.rb:9
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 11ms (Views: 8.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/urls/convert_long" for 127.0.0.1 at 2019-01-30 15:57:00 +0530
+Processing by UrlsController#convert_long as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"POYZ28hOJmcbFiNUWetXspx/iLmOePkl1j+Dr+WKTcDr2CHJsCM3XP7qZiCC6OclkDcGP8HQ0xDofvH4q7O6cA==", "long"=>"www.google.com", "commit"=>"Long to Short"}
+  [1m[36mUrl Load (0.8ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."long_url" = $1 LIMIT $2[0m  [["long_url", "www.google.com"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:74
+  [1m[36mDomain Load (0.7ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."domain_name" = $1 LIMIT $2[0m  [["domain_name", "www"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:95
+  [1m[36mDomain Load (0.5ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."domain_name" = $1 LIMIT $2[0m  [["domain_name", "default"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:98
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = $1 LIMIT $2[0m  [["short_url", "jHxgHPT"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:58
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/url.rb:78
+  [1m[36mUrl Create (0.7ms)[0m  [1m[32mINSERT INTO "urls" ("long_url", "short_url", "short_domain") VALUES ($1, $2, $3) RETURNING "id"[0m  [["long_url", "www.google.com"], ["short_url", "jHxgHPT"], ["short_domain", "df.lt"]]
+  ↳ app/models/url.rb:78
+  [1m[35m (41.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/url.rb:78
+  [1m[36mConversion Load (0.8ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-30"], ["LIMIT", 1]]
+  ↳ app/workers/counter_worker.rb:6
+  [1m[36mConversion Load (4.1ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-30"], ["LIMIT", 1]]
+  [1m[36mCACHE Conversion Load (0.0ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-30"], ["LIMIT", 1]]
+  ↳ app/models/conversion.rb:9
+  ↳ app/workers/counter_worker.rb:10
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/counter_worker.rb:12
+  Rendering urls/new.html.erb within layouts/application
+  [1m[36mConversion Update (1.0ms)[0m  [1m[33mUPDATE "conversions" SET "count" = $1, "updated_at" = $2 WHERE "conversions"."id" = $3[0m  [["count", 31], ["updated_at", "2019-01-30 10:27:00.227590"], ["id", 5]]
+  ↳ app/workers/counter_worker.rb:12
+  Rendered urls/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 183ms (Views: 11.1ms | ActiveRecord: 55.8ms)
+
+
+  [1m[35m (61.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/counter_worker.rb:12
+Started POST "/urls/convert_short" for 127.0.0.1 at 2019-01-30 15:57:05 +0530
+Processing by UrlsController#convert_short as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n37IJ4jqADY0c8F7MZ8iwbKTJ04B5OaI9ISGpHRfa0dEEJtvheDgpUMG1Re2d9WJzorVwXMta28yJiHX0zFm1Q==", "short"=>"jHxgHPT", "commit"=>"Short to Long"}
+  [1m[36mUrl Load (0.5ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = $1 LIMIT $2[0m  [["short_url", "jHxgHPT"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:116
+  [1m[36mUrl Load (0.5ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = $1 ORDER BY "urls"."id" ASC LIMIT $2[0m  [["short_url", "jHxgHPT"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:120
+  [1m[36mConversion Load (0.3ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-30"], ["LIMIT", 1]]
+  ↳ app/models/conversion.rb:9
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 14ms (Views: 7.3ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/urls/convert_long" for 127.0.0.1 at 2019-01-30 15:57:13 +0530
+Processing by UrlsController#convert_long as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DXqCvfYWlkhpjv6+7bWeTLVkolMph6fvMagL29nilyPaRLqvjnuHc4xyu8o2ti7buSws1WYvjdoP6XmMl9tgkw==", "long"=>"www.google.com", "commit"=>"Long to Short"}
+  [1m[36mUrl Load (0.8ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."long_url" = $1 LIMIT $2[0m  [["long_url", "www.google.com"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:74
+  [1m[36mConversion Load (0.3ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-30"], ["LIMIT", 1]]
+  ↳ app/models/conversion.rb:9
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 13ms (Views: 7.6ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/urls/convert_short" for 127.0.0.1 at 2019-01-30 15:57:25 +0530
+Processing by UrlsController#convert_short as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5RZo1mLzmSe2kuFhisVwFqPpwJxkeVjiUVhm4OZE+nY+eDueb/l5tMHn9Q0NLYde3/AyExaw1QWX+sGTQSr35A==", "short"=>"jHxgHPT", "commit"=>"Short to Long"}
+  [1m[36mConversion Load (2.9ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-30"], ["LIMIT", 1]]
+  ↳ app/models/conversion.rb:9
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 15ms (Views: 8.3ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/urls/convert_long" for 127.0.0.1 at 2019-01-30 16:00:33 +0530
+Processing by UrlsController#convert_long as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1e3SV+ikCIC8rWyAxpZQkFyaVrLM1q46A1JIMfFC/sYC0+pFkMkZu1lRKfQdleAHUNLYNIN+hA89Ezpmv3sJdg==", "long"=>"www.google.com/blastoise", "commit"=>"Long to Short"}
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."long_url" = $1 LIMIT $2[0m  [["long_url", "www.google.com/blastoise"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:70
+  [1m[36mConversion Load (0.3ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-30"], ["LIMIT", 1]]
+  ↳ app/models/conversion.rb:9
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 36ms (Views: 6.6ms | ActiveRecord: 7.7ms)
+
+
+Started POST "/urls/convert_short" for 127.0.0.1 at 2019-01-30 16:00:39 +0530
+Processing by UrlsController#convert_short as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LjAACsyV1UflXIZhrMF4Vl9DFW90xSBij0siMXNRfcb1XlNCwZ811JIpkg0rKY8eI1rn4AYMrYVJ6YVC1D9wVA==", "short"=>"ztLqe4C", "commit"=>"Short to Long"}
+  [1m[36mUrl Load (0.6ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = $1 LIMIT $2[0m  [["short_url", "ztLqe4C"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:107
+  [1m[36mUrl Load (0.5ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = $1 ORDER BY "urls"."id" ASC LIMIT $2[0m  [["short_url", "ztLqe4C"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:111
+  [1m[36mConversion Load (0.4ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-30"], ["LIMIT", 1]]
+  ↳ app/models/conversion.rb:9
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 15ms (Views: 8.2ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/urls/convert_long" for 127.0.0.1 at 2019-01-30 16:01:24 +0530
+Processing by UrlsController#convert_long as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HMw1g6w+5kGAQrh6hvlkW/+LZOl4R86HZJ6oExBdC2rL8g2R1FP3emW+/Q5d+tTM88Pqbzfv5LJa39pEXmT82g==", "long"=>"www.google.com/blastoise", "commit"=>"Long to Short"}
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."long_url" = $1 LIMIT $2[0m  [["long_url", "www.google.com/blastoise"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:70
+  [1m[36mConversion Load (0.4ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-30"], ["LIMIT", 1]]
+  ↳ app/models/conversion.rb:9
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (25.8ms)
+Completed 200 OK in 63ms (Views: 30.6ms | ActiveRecord: 8.9ms)
+
+
+Started POST "/urls/convert_short" for 127.0.0.1 at 2019-01-30 16:01:28 +0530
+Processing by UrlsController#convert_short as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qibo9LpyUV3pqbpNXmXmB3U8kZkBFDF7VWGJkU+XYqBxSLu8t3ixzp7criHZjRFPCSVjFnPdvJyTwy7i6PlvMg==", "short"=>"ztLqe4C", "commit"=>"Short to Long"}
+  [1m[36mConversion Load (0.5ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-30"], ["LIMIT", 1]]
+  ↳ app/models/conversion.rb:9
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/urls/convert_short" for 127.0.0.1 at 2019-01-30 16:01:33 +0530
+Processing by UrlsController#convert_short as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rzL6fNTKq2HbS29uOK6u+z6+NFVavp+BaQEWj87++Fl0XKk02cBL8qw+ewK/RlmzQqfG2ih3Emavo7H8aZD1yw==", "short"=>"ztLqe4C", "commit"=>"Short to Long"}
+  [1m[36mConversion Load (0.4ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-30"], ["LIMIT", 1]]
+  ↳ app/models/conversion.rb:9
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 11ms (Views: 7.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/urls/convert_long" for 127.0.0.1 at 2019-01-30 16:01:42 +0530
+Processing by UrlsController#convert_long as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oDzuXh4kZs9Vpgmc2Bs99O4M1+FC8ddhO9GyusS3Exp3AtZMZkl39LBaTOgDGI1j4kRZZw1Z/VQFkMDtio7kqg==", "long"=>"www.google.com/blastoise", "commit"=>"Long to Short"}
+Redirected to http://0.0.0.0:3000/users/new_user
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new_user" for 127.0.0.1 at 2019-01-30 16:01:42 +0530
+Processing by UsersController#new_user as HTML
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 21ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2019-01-30 16:01:47 +0530
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lZDW74c6Tf4IOW4q78AYwOX1naFML48JTvvDk0laaFL0ZsTD5XkZMqLYincdJoLgsn83uAFkcKJ7F1Yqe7Go+g==", "username"=>"raka", "password"=>"[FILTERED]", "commit"=>"Login"}
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "raka"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "raka"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 21ms (ActiveRecord: 5.8ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 16:01:47 +0530
+Processing by UrlsController#new as HTML
+  [1m[36mConversion Load (0.3ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-30"], ["LIMIT", 1]]
+  ↳ app/models/conversion.rb:9
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/urls/convert_long" for 127.0.0.1 at 2019-01-30 16:01:49 +0530
+Processing by UrlsController#convert_long as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DDy2GqGrKrq1q4+8vFNVy6s5XVrid531n1fGv39lhKDbAo4I2cY7gVBXyshnUOVcp3HT3K3ft8ChFrToMVxzEA==", "long"=>"www.google.com/blastoise", "commit"=>"Long to Short"}
+  [1m[36mUrl Load (0.9ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."long_url" = $1 LIMIT $2[0m  [["long_url", "www.google.com/blastoise"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:70
+  [1m[36mConversion Load (0.3ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-30"], ["LIMIT", 1]]
+  ↳ app/models/conversion.rb:9
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 12ms (Views: 7.1ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/urls/convert_short" for 127.0.0.1 at 2019-01-30 16:01:56 +0530
+Processing by UrlsController#convert_short as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VJYdG35CTXtxbw/BJLEAuZCOQ2mJ2To/a+cCykx73zSP+E5Tc0it6AYaG62jWffx7Jex5vsQt9itRaW56xXSpg==", "short"=>"ztLqe4C", "commit"=>"Short to Long"}
+  [1m[36mConversion Load (0.3ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-30"], ["LIMIT", 1]]
+  ↳ app/models/conversion.rb:9
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 11ms (Views: 7.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/urls/convert_short" for 127.0.0.1 at 2019-01-30 16:02:02 +0530
+Processing by UrlsController#convert_short as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"N6PwSoNf6CL7jqvvMdyCD5z2XsuI9jgBdLu/YnDrYMHszaMCjlUIsYz7v4O2NHVH4O+sRPo/teayGRgR14VtUw==", "short"=>"go.gl/ztLqe4C", "commit"=>"Short to Long"}
+  [1m[36mConversion Load (0.3ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-30"], ["LIMIT", 1]]
+  ↳ app/models/conversion.rb:9
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 10ms (Views: 7.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/urls/convert_long" for 127.0.0.1 at 2019-01-30 16:03:08 +0530
+Processing by UrlsController#convert_long as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BCGgBSSxrxVpZMbM6hCrT1aq32OWRqyEGOvRMkTQ5WbTH5gXXNy+LoyYg7gxExvYWuJR5dnuhrEmqqNlCukS1g==", "long"=>"www.google.com/goldeen", "commit"=>"Long to Short"}
+  [1m[36mUrl Load (0.5ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."long_url" = $1 LIMIT $2[0m  [["long_url", "www.google.com/goldeen"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:75
+  [1m[36mConversion Load (0.3ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-30"], ["LIMIT", 1]]
+  ↳ app/models/conversion.rb:9
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 40ms (Views: 6.5ms | ActiveRecord: 10.0ms)
+
+
+Started POST "/urls/convert_long" for 127.0.0.1 at 2019-01-30 16:03:19 +0530
+Processing by UrlsController#convert_long as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LTtVdgOgRsbuKqNJ1lBSnvRvuafDpM4ad0XVuUASu3P6BW1ke81X/QvW5j0NU+IJ+Cc3IYwM5C9JBKfuDitMww==", "long"=>"short_url = Rails.cache.fetch(long_url , :expires_in => 5.minutes)", "commit"=>"Long to Short"}
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."long_url" = $1 LIMIT $2[0m  [["long_url", "short_url = Rails.cache.fetch(long_url , :expires_in => 5.minutes)"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:75
+  [1m[36mDomain Load (0.4ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."domain_name" = $1 LIMIT $2[0m  [["domain_name", "short_url = Rails"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:96
+  [1m[36mDomain Load (0.5ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."domain_name" = $1 LIMIT $2[0m  [["domain_name", "default"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:99
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = $1 LIMIT $2[0m  [["short_url", "5nriB6p"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:58
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/url.rb:79
+  [1m[36mUrl Create (0.4ms)[0m  [1m[32mINSERT INTO "urls" ("long_url", "short_url", "short_domain") VALUES ($1, $2, $3) RETURNING "id"[0m  [["long_url", "short_url = Rails.cache.fetch(long_url , :expires_in => 5.minutes)"], ["short_url", "5nriB6p"], ["short_domain", "df.lt"]]
+  ↳ app/models/url.rb:79
+  [1m[35m (41.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/url.rb:79
+  [1m[36mConversion Load (0.3ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-30"], ["LIMIT", 1]]
+  ↳ app/models/conversion.rb:9
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 90ms (Views: 7.4ms | ActiveRecord: 47.8ms)
+
+
+  [1m[36mConversion Load (1.5ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-30"], ["LIMIT", 1]]
+  ↳ app/workers/counter_worker.rb:6
+  [1m[36mCACHE Conversion Load (0.0ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-30"], ["LIMIT", 1]]
+  ↳ app/workers/counter_worker.rb:10
+  [1m[35m (6.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/counter_worker.rb:12
+  [1m[36mConversion Update (51.3ms)[0m  [1m[33mUPDATE "conversions" SET "count" = $1, "updated_at" = $2 WHERE "conversions"."id" = $3[0m  [["count", 32], ["updated_at", "2019-01-30 10:33:19.651951"], ["id", 5]]
+  ↳ app/workers/counter_worker.rb:12
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/counter_worker.rb:12
+  [1m[36mUrl Load (1.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" ORDER BY "urls"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUrl Destroy (1.5ms)[0m  [1m[31mDELETE FROM "urls" WHERE "urls"."id" = $1[0m  [["id", 66]]
+  [1m[36mUrl Load (0.6ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" ORDER BY "urls"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started POST "/urls/convert_long" for 127.0.0.1 at 2019-01-30 16:04:32 +0530
+Processing by UrlsController#convert_long as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TmSZm0Nge5SCD/YyKVMgdMztwYxUBx4Of+wQZz4nk/6ZWqGJOw1qr2fzs0byUJDjwKVPChuvNDtBrWIwcB5kTg==", "long"=>"www.google.com/golduck", "commit"=>"Long to Short"}
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."long_url" = $1 LIMIT $2[0m  [["long_url", "www.google.com/golduck"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:76
+  [1m[36mConversion Load (0.3ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-30"], ["LIMIT", 1]]
+  ↳ app/models/conversion.rb:9
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 39ms (Views: 6.3ms | ActiveRecord: 8.2ms)
+
+
+Started POST "/urls/convert_long" for 127.0.0.1 at 2019-01-30 16:04:44 +0530
+Processing by UrlsController#convert_long as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yTVqtfVirSjtu3ly6AhU7ywbQIwTEnXgHvHNxybh5QYeC1KnjQ+8EwhHPAYzC+R4IFPOCly6X9UgsL+QaNgStg==", "long"=>"www.google.com/golduck", "commit"=>"Long to Short"}
+  [1m[36mConversion Load (1.0ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-30"], ["LIMIT", 1]]
+  ↳ app/models/conversion.rb:9
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 12ms (Views: 8.1ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/urls/convert_short" for 127.0.0.1 at 2019-01-30 16:05:24 +0530
+Processing by UrlsController#convert_short as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6oFYDp+tOGvo5M3PnhF7l9kHVRpqyyAh8UGWGIdubgwx7wtGkqfY+J+R2aMZ+YzfpR6nlRgCrcY34zFrIABjng==", "short"=>"www.google.com/golduck", "commit"=>"Short to Long"}
+  [1m[36mConversion Load (0.3ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-30"], ["LIMIT", 1]]
+  ↳ app/models/conversion.rb:9
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 28ms (Views: 7.0ms | ActiveRecord: 6.4ms)
+
+
+Started POST "/urls/convert_short" for 127.0.0.1 at 2019-01-30 16:05:41 +0530
+Processing by UrlsController#convert_short as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1Wb03ImoR4pYrT30+qLK/AOobR64Y1QvRwPNIWYb55AOCKeUhKKnGS/YKZh9Sj20f7Gfkcqq2ciBoWpSwXXqAg==", "short"=>"www.google.com/golduck", "commit"=>"Short to Long"}
+  [1m[36mConversion Load (1.2ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-30"], ["LIMIT", 1]]
+  ↳ app/models/conversion.rb:9
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 16ms (Views: 11.1ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/urls/convert_long" for 127.0.0.1 at 2019-01-30 16:05:45 +0530
+Processing by UrlsController#convert_long as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L2/JQwHViPw2+ajj71mZS1evk2nAF7f0R9JyN2vzbjf4UfFRebiZx9MF7Zc0WincW+cd74+/ncF5kwBgJcqZhw==", "long"=>"www.google.com/golduck", "commit"=>"Long to Short"}
+  [1m[36mConversion Load (0.5ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-30"], ["LIMIT", 1]]
+  ↳ app/models/conversion.rb:9
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 28ms (Views: 20.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/urls/convert_short" for 127.0.0.1 at 2019-01-30 16:05:48 +0530
+Processing by UrlsController#convert_short as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ziNXeaETGwq25escJBlzTzThasO7dpaHXn1PBfGURpkVTQQxrBn7mcGQ/3Cj8YQHSPiYTMm/G2CY3+h2VvpLCw==", "short"=>"www.google.com/golduck", "commit"=>"Short to Long"}
+  [1m[36mConversion Load (0.4ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-30"], ["LIMIT", 1]]
+  ↳ app/models/conversion.rb:9
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 20ms (Views: 14.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/urls/convert_short" for 127.0.0.1 at 2019-01-30 16:07:27 +0530
+Processing by UrlsController#convert_short as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XPzFmhboQy5JlB8dnsHV3asVfYiPUU9p8gE39Gr7R8KHkpbSG+KjvT7hC3EZKSKV1wyPB/2Ywo40o5CHzZVKUA==", "short"=>"www.google.com/golduck", "commit"=>"Short to Long"}
+  [1m[36mConversion Load (1.0ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-30"], ["LIMIT", 1]]
+  ↳ app/models/conversion.rb:9
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 21ms (Views: 14.7ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/urls/convert_long" for 127.0.0.1 at 2019-01-30 16:11:52 +0530
+Processing by UrlsController#convert_long as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iKjo11FnVfvui3NEdovHwHZzsWiYzM6fWZc53KU9mI1fltDFKQpEwAt3NjCtiHdXejs/7tdk5Kpn1kuL6wRvPQ==", "long"=>"www.youtube.com/charizard", "commit"=>"Long to Short"}
+Redirected to http://0.0.0.0:3000/users/new_user
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new_user" for 127.0.0.1 at 2019-01-30 16:11:52 +0530
+Processing by UsersController#new_user as HTML
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2019-01-30 16:11:57 +0530
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IXUmrKYTvrVZRRZcmv6F9QRyeWmdQ4JqHDIw0a+KJLVAgzSAxFDqefOk8gFoGB/VU/jTcNAIfcEp3qVonWHkHQ==", "username"=>"raka", "password"=>"[FILTERED]", "commit"=>"Login"}
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "raka"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "raka"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 20ms (ActiveRecord: 5.5ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 16:11:57 +0530
+Processing by UrlsController#new as HTML
+  [1m[36mConversion Load (0.3ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-30"], ["LIMIT", 1]]
+  ↳ app/models/conversion.rb:9
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 20ms (Views: 6.3ms | ActiveRecord: 3.7ms)
+
+
+Started POST "/urls/convert_long" for 127.0.0.1 at 2019-01-30 16:12:01 +0530
+Processing by UrlsController#convert_long as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E67G24IpzgDFEyJjtSd4Ny6p71tsz+UxTaSYNkmDqhzEkP7J+kTfOyDvZxduJMigIuFh3SNnzwRz5ephB7pdrA==", "long"=>"www.youtube.com/charizard", "commit"=>"Long to Short"}
+  [1m[36mUrl Load (0.7ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."long_url" = $1 LIMIT $2[0m  [["long_url", "www.youtube.com/charizard"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:70
+  [1m[36mConversion Load (0.7ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-30"], ["LIMIT", 1]]
+  ↳ app/models/conversion.rb:9
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 37ms (Views: 10.1ms | ActiveRecord: 6.8ms)
+
+
+Started POST "/urls/convert_long" for 127.0.0.1 at 2019-01-30 16:12:12 +0530
+Processing by UrlsController#convert_long as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MlHchJjty85bpoX+lQzPdBruqSOnWSzwmue9ojXnMZ3lb+SW4IDa9b5awIpOD3/jFqYnpejxBsWkps/1e97GLQ==", "long"=>"www.youtube.com/charmander", "commit"=>"Long to Short"}
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."long_url" = $1 LIMIT $2[0m  [["long_url", "www.youtube.com/charmander"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:70
+  [1m[36mConversion Load (0.3ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-30"], ["LIMIT", 1]]
+  ↳ app/models/conversion.rb:9
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 11ms (Views: 7.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/urls/convert_long" for 127.0.0.1 at 2019-01-30 16:12:17 +0530
+Processing by UrlsController#convert_long as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YJ9B1cu3LguFgXPZ81v/04fKTtyX1nG5ikPEj1Hmsxe3oXnHs9o/MGB9Nq0oWE9Ei4LAWth+W4y0ArbYH99Epw==", "long"=>"www.google.com/blastoise", "commit"=>"Long to Short"}
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."long_url" = $1 LIMIT $2[0m  [["long_url", "www.google.com/blastoise"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:70
+  [1m[36mConversion Load (0.4ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-30"], ["LIMIT", 1]]
+  ↳ app/models/conversion.rb:9
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 11ms (Views: 7.2ms | ActiveRecord: 0.8ms)
+
+
+  [1m[36mUrl Load (0.7ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" ORDER BY "urls"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/conversions/show" for 127.0.0.1 at 2019-01-30 16:14:16 +0530
+Processing by ConversionsController#show as HTML
+  Rendering conversions/show.html.erb within layouts/application
+  [1m[36mConversion Load (0.5ms)[0m  [1m[34mSELECT "conversions".* FROM "conversions"[0m
+  ↳ app/views/conversions/show.html.erb:9
+  Rendered conversions/show.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 17ms (Views: 10.2ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 16:14:41 +0530
+Processing by UrlsController#new as HTML
+  [1m[36mConversion Load (0.5ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-30"], ["LIMIT", 1]]
+  ↳ app/models/conversion.rb:9
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 13ms (Views: 9.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2019-01-30 16:15:40 +0530
+Processing by SearchController#search as HTML
+  Rendering search/search.html.erb within layouts/application
+  Rendered search/search.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 23ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q=char" for 127.0.0.1 at 2019-01-30 16:15:45 +0530
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"char"}
+  Rendering search/search.html.erb within layouts/application
+  [1m[36mUrl Load (0.5ms)[0m  [1m[34mSELECT "urls".* FROM "urls" WHERE "urls"."id" IN ($1, $2, $3, $4, $5, $6, $7, $8)[0m  [["id", 31], ["id", 17], ["id", 15], ["id", 16], ["id", 42], ["id", 37], ["id", 36], ["id", 35]]
+  ↳ app/views/search/search.html.erb:18
+  Rendered search/search.html.erb within layouts/application (18.4ms)
+Completed 200 OK in 30ms (Views: 18.1ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q=gol" for 127.0.0.1 at 2019-01-30 16:16:10 +0530
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"gol"}
+  Rendering search/search.html.erb within layouts/application
+  [1m[36mUrl Load (0.5ms)[0m  [1m[34mSELECT "urls".* FROM "urls" WHERE "urls"."id" IN ($1, $2)[0m  [["id", 58], ["id", 60]]
+  ↳ app/views/search/search.html.erb:18
+  Rendered search/search.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 13ms (Views: 10.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q=google" for 127.0.0.1 at 2019-01-30 16:16:23 +0530
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"google"}
+  Rendering search/search.html.erb within layouts/application
+  [1m[36mUrl Load (0.5ms)[0m  [1m[34mSELECT "urls".* FROM "urls" WHERE "urls"."id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)[0m  [["id", 65], ["id", 53], ["id", 51], ["id", 55], ["id", 58], ["id", 60], ["id", 59], ["id", 54], ["id", 52], ["id", 48]]
+  ↳ app/views/search/search.html.erb:18
+  Rendered search/search.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 18ms (Views: 15.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q=yout" for 127.0.0.1 at 2019-01-30 16:16:29 +0530
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"yout"}
+  Rendering search/search.html.erb within layouts/application
+  [1m[36mUrl Load (0.6ms)[0m  [1m[34mSELECT "urls".* FROM "urls" WHERE "urls"."id" IN ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)[0m  [["id", 38], ["id", 40], ["id", 39], ["id", 41], ["id", 45], ["id", 44], ["id", 46], ["id", 47], ["id", 42], ["id", 43]]
+  ↳ app/views/search/search.html.erb:18
+  Rendered search/search.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 18ms (Views: 15.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-30 16:16:51 +0530
+Processing by UsersController#new_user as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 16:16:51 +0530
+Processing by UrlsController#new as HTML
+  [1m[36mConversion Load (0.8ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-30"], ["LIMIT", 1]]
+  ↳ app/models/conversion.rb:9
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 37ms (Views: 6.8ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/sidekiq" for 127.0.0.1 at 2019-01-30 16:16:55 +0530
+Started GET "/sidekiq/stylesheets/bootstrap.css" for 127.0.0.1 at 2019-01-30 16:16:57 +0530
+Started GET "/sidekiq/stylesheets/application.css" for 127.0.0.1 at 2019-01-30 16:16:57 +0530
+Started GET "/sidekiq/javascripts/application.js" for 127.0.0.1 at 2019-01-30 16:16:57 +0530
+Started GET "/sidekiq/javascripts/dashboard.js" for 127.0.0.1 at 2019-01-30 16:16:57 +0530
+Started GET "/sidekiq/images/status.png" for 127.0.0.1 at 2019-01-30 16:16:57 +0530
+Started GET "/sidekiq/images/favicon.ico" for 127.0.0.1 at 2019-01-30 16:16:58 +0530
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2019-01-30 16:17:02 +0530
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2019-01-30 16:17:07 +0530
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2019-01-30 16:17:12 +0530
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2019-01-30 16:17:17 +0530
+Started GET "/sidekiq/stats" for 127.0.0.1 at 2019-01-30 16:17:22 +0530
+Started GET "/sidekiq" for 127.0.0.1 at 2019-01-30 16:17:24 +0530
+Started GET "/" for 127.0.0.1 at 2019-01-30 16:17:24 +0530
+Processing by UsersController#new_user as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 16:17:24 +0530
+Processing by UrlsController#new as HTML
+  [1m[36mConversion Load (0.8ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-30"], ["LIMIT", 1]]
+  ↳ app/models/conversion.rb:9
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (23.2ms)
+Completed 200 OK in 203ms (Views: 49.3ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/urls/newjbkb" for 127.0.0.1 at 2019-01-30 16:17:32 +0530
+Started GET "/" for 127.0.0.1 at 2019-01-30 16:17:32 +0530
+Processing by UsersController#new_user as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 16:17:32 +0530
+Processing by UrlsController#new as HTML
+  [1m[36mConversion Load (0.4ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-30"], ["LIMIT", 1]]
+  ↳ app/models/conversion.rb:9
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 21ms (Views: 18.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/login" for 127.0.0.1 at 2019-01-30 16:17:46 +0530
+Started GET "/" for 127.0.0.1 at 2019-01-30 16:17:46 +0530
+Processing by UsersController#new_user as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 16:17:46 +0530
+Processing by UrlsController#new as HTML
+  [1m[36mConversion Load (0.8ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-30"], ["LIMIT", 1]]
+  ↳ app/models/conversion.rb:9
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 13ms (Views: 8.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/domains/new" for 127.0.0.1 at 2019-01-30 16:18:06 +0530
+Processing by DomainsController#new as HTML
+  Rendering domains/new.html.erb within layouts/application
+  Rendered domains/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 44ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 16:18:14 +0530
+Processing by UrlsController#new as HTML
+  [1m[36mConversion Load (0.4ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-30"], ["LIMIT", 1]]
+  ↳ app/models/conversion.rb:9
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 11ms (Views: 7.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/conversions/show" for 127.0.0.1 at 2019-01-30 16:19:07 +0530
+Processing by ConversionsController#show as HTML
+  Rendering conversions/show.html.erb within layouts/application
+  [1m[36mConversion Load (0.5ms)[0m  [1m[34mSELECT "conversions".* FROM "conversions"[0m
+  ↳ app/views/conversions/show.html.erb:9
+  Rendered conversions/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 17ms (Views: 7.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/urls/convert_long" for 127.0.0.1 at 2019-01-30 16:32:03 +0530
+Processing by UrlsController#convert_long as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8s09o9j21SowVDzxHI6LHFisr8+K/3nRZA3Orrc/tbUl8wWxoJvEEdWoeYXHjTuLVOQhScVXU+RaTLz5+QZCBQ==", "long"=>"www.youtube.com/magby", "commit"=>"Long to Short"}
+Redirected to http://0.0.0.0:3000/users/new_user
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new_user" for 127.0.0.1 at 2019-01-30 16:32:03 +0530
+Processing by UsersController#new_user as HTML
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 55ms (Views: 28.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2019-01-30 16:34:10 +0530
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VScochY1mXQPYabQt/JDBOV4qTZ/YiDlSQEmhYQCbCY00TpedHbNuKWAQo1FFNkksvIDLzIp30587bM8tumsjg==", "username"=>"raka", "password"=>"[FILTERED]", "commit"=>"Login"}
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "raka"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "raka"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 78ms (ActiveRecord: 10.1ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 16:34:11 +0530
+Processing by UrlsController#new as HTML
+  [1m[36mConversion Load (0.8ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-30"], ["LIMIT", 1]]
+  ↳ app/models/conversion.rb:9
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 55ms (Views: 37.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 16:56:12 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/users/new_user
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new_user" for 127.0.0.1 at 2019-01-30 16:56:12 +0530
+Processing by UsersController#new_user as HTML
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2019-01-30 17:37:22 +0530
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZAUHX+bZoZonA1BjhHKODcPfoUUyzrA6Kn/KhfplBxAF8xVzhJr1Vo3itD52lBQtlFULXH+FT5Efk188yI7HuA==", "username"=>"raka", "password"=>"[FILTERED]", "commit"=>"Login"}
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "raka"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:13
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "raka"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:15
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 69ms (ActiveRecord: 11.1ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 17:37:23 +0530
+Processing by UrlsController#new as HTML
+  [1m[36mConversion Load (1.0ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-30"], ["LIMIT", 1]]
+  ↳ app/models/conversion.rb:9
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 34ms (Views: 6.2ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 19:10:39 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/users/new_user
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new_user" for 127.0.0.1 at 2019-01-30 19:10:39 +0530
+Processing by UsersController#new_user as HTML
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."email" = $2 LIMIT $3[0m  [["username", "raka"], ["email", "kaustubhrakeshzen@gmail.com"], ["LIMIT", 1]]
+Started POST "/users/login" for 127.0.0.1 at 2019-01-30 20:47:23 +0530
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q+3gLbtFR66RfQcvheqAjWo7HoSqT3Fpln5FvdRxHKrKG/IB2QYTYjuc43J3DBqtPbG0necEjsKjktAE5prcAg==", "username"=>"raka", "password"=>"[FILTERED]", "commit"=>"Login"}
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "raka"], ["password", "e4ebaeb48e934995088e06e7aeb9aa34"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:13
+No template found for UsersController#login, rendering head :no_content
+Completed 204 No Content in 184ms (ActiveRecord: 7.9ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2019-01-30 20:47:25 +0530
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q+3gLbtFR66RfQcvheqAjWo7HoSqT3Fpln5FvdRxHKrKG/IB2QYTYjuc43J3DBqtPbG0necEjsKjktAE5prcAg==", "username"=>"raka", "password"=>"[FILTERED]", "commit"=>"Login"}
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "raka"], ["password", "e4ebaeb48e934995088e06e7aeb9aa34"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:13
+No template found for UsersController#login, rendering head :no_content
+Completed 204 No Content in 62ms (ActiveRecord: 1.9ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2019-01-30 20:48:27 +0530
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q+3gLbtFR66RfQcvheqAjWo7HoSqT3Fpln5FvdRxHKrKG/IB2QYTYjuc43J3DBqtPbG0necEjsKjktAE5prcAg==", "username"=>"raka", "password"=>"[FILTERED]", "commit"=>"Login"}
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "raka"], ["password", "e4ebaeb48e934995088e06e7aeb9aa34"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:13
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 63ms (Views: 54.0ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2019-01-30 20:48:35 +0530
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZXYi+S9UgNEHx2vvMlye4WeBrN2ccioFAFDvXpTAFesEgDDVTRfUHa0mj7LAugTBMAsGxNE51a41vHrnpivVQw==", "username"=>"raka", "password"=>"[FILTERED]", "commit"=>"Login"}
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "raka"], ["password", "202cb962ac59075b964b07152d234b70"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:13
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 16ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 20:48:35 +0530
+Processing by UrlsController#new as HTML
+  [1m[36mConversion Load (1.4ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-30"], ["LIMIT", 1]]
+  ↳ app/models/conversion.rb:9
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 53ms (Views: 9.2ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/urls/logout" for 127.0.0.1 at 2019-01-30 20:48:38 +0530
+Processing by UrlsController#logout as HTML
+Redirected to http://0.0.0.0:3000/users/new_user
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new_user" for 127.0.0.1 at 2019-01-30 20:48:38 +0530
+Processing by UsersController#new_user as HTML
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2019-01-30 22:22:01 +0530
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HHXO01+P9tjpBOViuSvd2UNx2oo7klGOptRWx2j16eN9g9z/PcyiFEPlAT9LzUf5FPtwk3bZriWTOMN+Wh4pSw==", "username"=>"raka", "password"=>"[FILTERED]", "commit"=>"Login"}
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "raka"], ["password", "202cb962ac59075b964b07152d234b70"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:13
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 220ms (ActiveRecord: 12.8ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:22:02 +0530
+Processing by UrlsController#new as HTML
+  [1m[36mConversion Load (0.6ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-30"], ["LIMIT", 1]]
+  ↳ app/models/conversion.rb:9
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 65ms (Views: 21.2ms | ActiveRecord: 5.1ms)
+
+
+Started POST "/urls/convert_long" for 127.0.0.1 at 2019-01-30 22:22:06 +0530
+Processing by UrlsController#convert_long as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3TY+m61LbwrUhld0Papnikar+dyWGPe1TwpZF5zYFBUKCAaJ1SZ+MTF6EgDmqdcdSuN3Wtmw3YBxSytA0uHjpQ==", "long"=>"www.youtube.com/charizard", "commit"=>"Long to Short"}
+  [1m[36mUrl Load (0.6ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."long_url" = $1 LIMIT $2[0m  [["long_url", "www.youtube.com/charizard"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:70
+  [1m[36mConversion Load (0.5ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-30"], ["LIMIT", 1]]
+  ↳ app/models/conversion.rb:9
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 120ms (Views: 7.0ms | ActiveRecord: 6.0ms)
+
+
+Started POST "/urls/convert_long" for 127.0.0.1 at 2019-01-30 22:22:14 +0530
+Processing by UrlsController#convert_long as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LoM5IurbD/60tnDP9IVoT17oRqfGStxT7ewRB896Y7b5vQEwkrYexVFKNbsvhtjYUqDIIYni9mbTrWNQgUOUBg==", "long"=>"www.youtube.com/charizard", "commit"=>"Long to Short"}
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."long_url" = $1 LIMIT $2[0m  [["long_url", "www.youtube.com/charizard"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:70
+  [1m[36mConversion Load (0.4ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-30"], ["LIMIT", 1]]
+  ↳ app/models/conversion.rb:9
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 10ms (Views: 6.8ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/urls/convert_short" for 127.0.0.1 at 2019-01-30 22:22:18 +0530
+Processing by UrlsController#convert_short as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"neFp5XMcc4cMtlo6N/CjdDPecQjtZ9Wy5FCUiOAt3D1GjzqtfhaTFHvDTlawGFQ8T8eDh5+uWFUi8jP7R0PRrw==", "short"=>"yt.ub/OQMigkU", "commit"=>"Short to Long"}
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = $1 LIMIT $2[0m  [["short_url", "OQMigkU"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:104
+  [1m[36mConversion Load (0.6ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-30"], ["LIMIT", 1]]
+  ↳ app/models/conversion.rb:9
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (30.1ms)
+Completed 200 OK in 40ms (Views: 33.1ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/urls/convert_long" for 127.0.0.1 at 2019-01-30 22:23:32 +0530
+Processing by UrlsController#convert_long as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1mOwsboXpM216eXec4HMW3DQacafwd49ICu5+q+6uf8BXYijwnq19lAVoKqognzMfJjnQNBp9Ageasut4YNOTw==", "long"=>"www.youtube.com/charizard", "commit"=>"Long to Short"}
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."long_url" = $1 LIMIT $2[0m  [["long_url", "www.youtube.com/charizard"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:70
+  [1m[36mConversion Load (0.3ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-30"], ["LIMIT", 1]]
+  ↳ app/models/conversion.rb:9
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 36ms (Views: 7.8ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/urls/logout" for 127.0.0.1 at 2019-01-30 22:27:00 +0530
+Processing by UrlsController#logout as HTML
+Redirected to http://0.0.0.0:3000/users/new_user
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new_user" for 127.0.0.1 at 2019-01-30 22:27:00 +0530
+Processing by UsersController#new_user as HTML
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 25ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2019-01-30 22:27:05 +0530
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"47yTue8iNthjrBU+qnGxyTo0g/2c87af6z4/cT0ysl2CSoGVjWFiFMlN8WNYlyvpbb4p5NG4STTe0qrID9ly9Q==", "username"=>"raka", "password"=>"[FILTERED]", "commit"=>"Login"}
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "raka"], ["password", "202cb962ac59075b964b07152d234b70"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:13
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 20ms (ActiveRecord: 5.6ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:27:05 +0530
+Processing by UrlsController#new as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `is_session_over_no' for UsersHelper:Module):
+  
+app/controllers/urls_controller.rb:8:in `new'
+Started POST "/users/login" for 127.0.0.1 at 2019-01-30 22:27:30 +0530
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"47yTue8iNthjrBU+qnGxyTo0g/2c87af6z4/cT0ysl2CSoGVjWFiFMlN8WNYlyvpbb4p5NG4STTe0qrID9ly9Q==", "username"=>"raka", "password"=>"[FILTERED]", "commit"=>"Login"}
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "raka"], ["password", "202cb962ac59075b964b07152d234b70"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:13
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 17ms (ActiveRecord: 5.3ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:27:30 +0530
+Processing by UrlsController#new as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `session' for UsersHelper:Module):
+  
+app/helpers/users_helper.rb:32:in `is_session_over_no'
+app/controllers/urls_controller.rb:8:in `new'
+Started POST "/users/login" for 127.0.0.1 at 2019-01-30 22:28:03 +0530
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"47yTue8iNthjrBU+qnGxyTo0g/2c87af6z4/cT0ysl2CSoGVjWFiFMlN8WNYlyvpbb4p5NG4STTe0qrID9ly9Q==", "username"=>"raka", "password"=>"[FILTERED]", "commit"=>"Login"}
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "raka"], ["password", "202cb962ac59075b964b07152d234b70"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:13
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 17ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:28:03 +0530
+Processing by UrlsController#new as HTML
+Completed 500 Internal Server Error in 215ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `redirect' for #<UrlsController:0x00007fdc70f657d0>
+Did you mean?  redirect_to):
+  
+app/helpers/urls_helper.rb:37:in `is_session_over_no'
+app/controllers/urls_controller.rb:8:in `new'
+Started POST "/users/login" for 127.0.0.1 at 2019-01-30 22:28:58 +0530
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"47yTue8iNthjrBU+qnGxyTo0g/2c87af6z4/cT0ysl2CSoGVjWFiFMlN8WNYlyvpbb4p5NG4STTe0qrID9ly9Q==", "username"=>"raka", "password"=>"[FILTERED]", "commit"=>"Login"}
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "raka"], ["password", "202cb962ac59075b964b07152d234b70"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:13
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 19ms (ActiveRecord: 5.5ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:28:58 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:28:58 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:28:58 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:28:58 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:28:58 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:28:58 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:28:58 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:28:58 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:28:58 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:28:58 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:28:58 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:28:58 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:28:58 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:28:58 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:28:58 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:28:58 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:28:58 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:28:58 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:28:58 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2019-01-30 22:29:06 +0530
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"47yTue8iNthjrBU+qnGxyTo0g/2c87af6z4/cT0ysl2CSoGVjWFiFMlN8WNYlyvpbb4p5NG4STTe0qrID9ly9Q==", "username"=>"raka", "password"=>"[FILTERED]", "commit"=>"Login"}
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "raka"], ["password", "202cb962ac59075b964b07152d234b70"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:13
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:29:06 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:29:06 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:29:06 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:29:06 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:29:06 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:29:06 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:29:06 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:29:06 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:29:06 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:29:06 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:29:06 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:29:06 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:29:06 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:29:06 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:29:06 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:29:06 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:29:06 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:29:06 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:29:06 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2019-01-30 22:29:20 +0530
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"47yTue8iNthjrBU+qnGxyTo0g/2c87af6z4/cT0ysl2CSoGVjWFiFMlN8WNYlyvpbb4p5NG4STTe0qrID9ly9Q==", "username"=>"raka", "password"=>"[FILTERED]", "commit"=>"Login"}
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "raka"], ["password", "202cb962ac59075b964b07152d234b70"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:13
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:29:20 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:29:20 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:29:20 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:29:20 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:29:20 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:29:20 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:29:20 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:29:20 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:29:20 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:29:20 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:29:20 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:29:20 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:29:20 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:29:20 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:29:20 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:29:20 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:29:20 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:29:20 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:29:20 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2019-01-30 22:31:48 +0530
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"47yTue8iNthjrBU+qnGxyTo0g/2c87af6z4/cT0ysl2CSoGVjWFiFMlN8WNYlyvpbb4p5NG4STTe0qrID9ly9Q==", "username"=>"raka", "password"=>"[FILTERED]", "commit"=>"Login"}
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "raka"], ["password", "202cb962ac59075b964b07152d234b70"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:13
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 24ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:31:49 +0530
+Processing by UrlsController#new as HTML
+Completed 500 Internal Server Error in 137ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `get_conv' for #<Class:0x00007fdc6fcbe690>):
+  
+app/controllers/urls_controller.rb:13:in `new'
+Started POST "/users/login" for 127.0.0.1 at 2019-01-30 22:33:16 +0530
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"47yTue8iNthjrBU+qnGxyTo0g/2c87af6z4/cT0ysl2CSoGVjWFiFMlN8WNYlyvpbb4p5NG4STTe0qrID9ly9Q==", "username"=>"raka", "password"=>"[FILTERED]", "commit"=>"Login"}
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "raka"], ["password", "202cb962ac59075b964b07152d234b70"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:13
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 16ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:33:16 +0530
+Processing by UrlsController#new as HTML
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:33:42 +0530
+Processing by UrlsController#new as HTML
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:45:08 +0530
+Processing by UrlsController#new as HTML
+Redirected to http://0.0.0.0:3000/users/new_user
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new_user" for 127.0.0.1 at 2019-01-30 22:45:08 +0530
+Processing by UsersController#new_user as HTML
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2019-01-30 22:45:13 +0530
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bAonXITe/+zk71Xl+qxro435po5AwQoJU3Yp8314wucN/DVw5p2rIE4OsbgISvGD2nMMlw2K9aJmmrxKT5MCTw==", "username"=>"raka", "password"=>"[FILTERED]", "commit"=>"Login"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/rakesh/UrlShortner/app/models/user.rb:4: syntax error, unexpected tIDENTIFIER, expecting end
+...assword ,:email ,:name presence: true
+...                       ^~~~~~~~):
+  
+app/models/user.rb:4: syntax error, unexpected tIDENTIFIER, expecting end
+app/controllers/users_controller.rb:34:in `login'
+Started POST "/users/login" for 127.0.0.1 at 2019-01-30 22:45:41 +0530
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bAonXITe/+zk71Xl+qxro435po5AwQoJU3Yp8314wucN/DVw5p2rIE4OsbgISvGD2nMMlw2K9aJmmrxKT5MCTw==", "username"=>"raka", "password"=>"[FILTERED]", "commit"=>"Login"}
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "raka"], ["password", "202cb962ac59075b964b07152d234b70"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 27ms (ActiveRecord: 11.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:45:41 +0530
+Processing by UrlsController#new as HTML
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/conversions/index" for 127.0.0.1 at 2019-01-30 22:45:47 +0530
+Processing by ConversionsController#index as HTML
+  Rendering conversions/index.html.erb within layouts/application
+  [1m[36mConversion Load (0.8ms)[0m  [1m[34mSELECT "conversions".* FROM "conversions"[0m
+  ↳ app/views/conversions/index.html.erb:9
+  Rendered conversions/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 30ms (Views: 11.9ms | ActiveRecord: 5.5ms)
+
+
+Started POST "/urls/convert_long" for 127.0.0.1 at 2019-01-30 22:45:56 +0530
+Processing by UrlsController#convert_long as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qdlVR8BMpUp051JddiF3xdX+2wyJXe5UDf/gKjNOmIB+521VuCG0cZEbFymtIsdS2bZVisb1xGEzvpJ9fXdvMA==", "long"=>"www.google.com/goldeen", "commit"=>"Long to Short"}
+  [1m[36mUrl Load (0.6ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."long_url" = $1 LIMIT $2[0m  [["long_url", "www.google.com/goldeen"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:70
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 67ms (Views: 7.5ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/urls/logout" for 127.0.0.1 at 2019-01-30 22:46:58 +0530
+Processing by UrlsController#logout as HTML
+Redirected to http://0.0.0.0:3000/users/new_user
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new_user" for 127.0.0.1 at 2019-01-30 22:46:59 +0530
+Processing by UsersController#new_user as HTML
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2019-01-30 22:47:06 +0530
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1ClF3nrTM57YL8laoJuz1cdDrTl0QPVME04XGBLwgmi131fyGJBnUnLOLQdSfSn1kMkHIDkLCucmooKhIBtCwA==", "username"=>"raka", "password"=>"[FILTERED]", "commit"=>"Login"}
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "raka"], ["password", "408a9c4a79800232ac656249af3162eb"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 14ms (Views: 5.0ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2019-01-30 22:49:29 +0530
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iTI04tVj93r6u9gTiZAUlZ+In349+hVt5oBBfCzpm5ToxCbOtyCjtlBaPE57do61yAI1Z3Cx6sbTbNTFHgJbPA==", "username"=>"raka", "password"=>"[FILTERED]", "commit"=>"Login"}
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "raka"], ["password", "202cb962ac59075b964b07152d234b70"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 17ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 22:49:29 +0530
+Processing by UrlsController#new as HTML
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/urls/convert_short" for 127.0.0.1 at 2019-01-30 22:49:35 +0530
+Processing by UrlsController#convert_short as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bzLH37SXLbbzwI0mMrRvVxn18gfwrvPeOBXIo5VL0yK0XJSXuZ3NJYS1mUq1XJgfZewAiIJnfjn+t2/QMiXesA==", "short"=>"adafsada", "commit"=>"Short to Long"}
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = $1 LIMIT $2[0m  [["short_url", "adafsada"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:104
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 28ms (Views: 5.7ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/urls/convert_long" for 127.0.0.1 at 2019-01-30 22:49:41 +0530
+Processing by UrlsController#convert_long as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z0W8REw0SYkQXugsf7hEwRB5NRk86n6PxcRUgZ6rv6iwe4RWNFlYsvWirViku/RWHDG7n3NCVLr7hSbW0JJIGA==", "long"=>"www.google.com/goldeen", "commit"=>"Long to Short"}
+  [1m[36mUrl Load (0.6ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."long_url" = $1 LIMIT $2[0m  [["long_url", "www.google.com/goldeen"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:70
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (33.2ms)
+Completed 200 OK in 49ms (Views: 36.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/urls/logout" for 127.0.0.1 at 2019-01-30 23:04:24 +0530
+Processing by UrlsController#logout as HTML
+Redirected to http://0.0.0.0:3000/users/new_user
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new_user" for 127.0.0.1 at 2019-01-30 23:04:25 +0530
+Processing by UsersController#new_user as HTML
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 39ms (Views: 21.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2019-01-30 23:04:41 +0530
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dQBglhtbRcsFR7Nw14JAX1OumuP7r1OX5BoTAybftZsU9nK6eRgRB6+mVy0lZNp/BCQw+rbkrDzR9oa6FDR1Mw==", "username"=>"raka", "password"=>"[FILTERED]", "commit"=>"Login"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 1)):
+  
+app/helpers/users_helper.rb:6:in `check_if_empty'
+app/controllers/users_controller.rb:27:in `login'
+Started POST "/users/login" for 127.0.0.1 at 2019-01-30 23:05:25 +0530
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dQBglhtbRcsFR7Nw14JAX1OumuP7r1OX5BoTAybftZsU9nK6eRgRB6+mVy0lZNp/BCQw+rbkrDzR9oa6FDR1Mw==", "username"=>"raka", "password"=>"[FILTERED]", "commit"=>"Login"}
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "raka"], ["password", "202cb962ac59075b964b07152d234b70"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 53ms (ActiveRecord: 12.9ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 23:05:25 +0530
+Processing by UrlsController#new as HTML
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 25ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/logout" for 127.0.0.1 at 2019-01-30 23:05:49 +0530
+Processing by UrlsController#logout as HTML
+Redirected to http://0.0.0.0:3000/users/new_user
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new_user" for 127.0.0.1 at 2019-01-30 23:05:49 +0530
+Processing by UsersController#new_user as HTML
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2019-01-30 23:06:32 +0530
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TwZXYxLC4dWHp6hEAx56Tx+FJzkPrC/8CCDBmP/h83Au8EVPcIG1GS1GTBnx+OBvSA+NIELn0Fc9zFQhzQoz2A==", "username"=>"raka", "password"=>"[FILTERED]", "commit"=>"Login"}
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "raka"], ["password", "202cb962ac59075b964b07152d234b70"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 45ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 23:06:32 +0530
+Processing by UrlsController#new as HTML
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/logout" for 127.0.0.1 at 2019-01-30 23:07:53 +0530
+Processing by UrlsController#logout as HTML
+Redirected to http://0.0.0.0:3000/users/new_user
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new_user" for 127.0.0.1 at 2019-01-30 23:07:53 +0530
+Processing by UsersController#new_user as HTML
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2019-01-30 23:07:58 +0530
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XxTi3uaMNzNh8f7iCSy30aDa3bk39UGcNo8PHO/bem4+4vDyhM9j/8sQGr/7yi3x91B3oHq+vjcDY5ql3TC6xg==", "username"=>"raka", "password"=>"[FILTERED]", "commit"=>"Login"}
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "raka"], ["password", "202cb962ac59075b964b07152d234b70"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 19ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 23:07:58 +0530
+Processing by UrlsController#new as HTML
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/logout" for 127.0.0.1 at 2019-01-30 23:08:32 +0530
+Processing by UrlsController#logout as HTML
+Redirected to http://0.0.0.0:3000/users/new_user
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new_user" for 127.0.0.1 at 2019-01-30 23:08:32 +0530
+Processing by UsersController#new_user as HTML
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2019-01-30 23:08:36 +0530
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dHSf6ZmWHMW20gt5MZ3nBylNA3gy306ebMD6L3/WyycVgo3F+9VICRwz7yTDe30nfsepYX+UsTVZLG+WTT0Ljw==", "username"=>"raka", "password"=>"[FILTERED]", "commit"=>"Login"}
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "raka"], ["password", "202cb962ac59075b964b07152d234b70"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 20ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 23:08:36 +0530
+Processing by UrlsController#new as HTML
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/logout" for 127.0.0.1 at 2019-01-30 23:09:16 +0530
+Processing by UrlsController#logout as HTML
+Redirected to http://0.0.0.0:3000/users/new_user
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new_user" for 127.0.0.1 at 2019-01-30 23:09:16 +0530
+Processing by UsersController#new_user as HTML
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for 127.0.0.1 at 2019-01-30 23:09:21 +0530
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7UOJLXup0V8o6N0Qm0scJDIRYZ8weVun2xOrW/r/K5mMtZsBGeqFk4IJOU1prYYEZZvLhn0ypAzu/z7iyBTrMQ==", "username"=>"raka", "password"=>"[FILTERED]", "commit"=>"Login"}
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "raka"], ["password", "202cb962ac59075b964b07152d234b70"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 19ms (ActiveRecord: 5.5ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 23:09:21 +0530
+Processing by UrlsController#new as HTML
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/logout" for 127.0.0.1 at 2019-01-30 23:17:21 +0530
+Processing by UrlsController#logout as HTML
+Redirected to http://0.0.0.0:3000/users/new_user
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new_user" for 127.0.0.1 at 2019-01-30 23:17:21 +0530
+Processing by UsersController#new_user as HTML
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/signup" for 127.0.0.1 at 2019-01-30 23:17:23 +0530
+Processing by UsersController#signup as HTML
+  Rendering users/signup.html.erb within layouts/application
+  Rendered users/signup.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 25ms (Views: 7.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/signup_entry" for 127.0.0.1 at 2019-01-30 23:18:38 +0530
+Processing by UsersController#signup_entry as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ul/ujJkfN7l5RIFarVIoEJbSbvt72f7RFQy0lHLgFiaUmsGlbIa5nvjsdD5E3VfX/L0OJCX2/F1Bwr0JUuTfDg==", "username"=>"rakalicious", "fullname"=>"Kaustubh Rakesh", "email"=>"rakalicious2408@gmail.com", "password"=>"[FILTERED]", "confirm_password"=>"[FILTERED]", "commit"=>"signup"}
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 5, expected 1)):
+  
+app/helpers/users_helper.rb:6:in `check_if_empty'
+app/controllers/users_controller.rb:48:in `signup_entry'
+Started POST "/users/signup_entry" for 127.0.0.1 at 2019-01-30 23:19:55 +0530
+Processing by UsersController#signup_entry as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ul/ujJkfN7l5RIFarVIoEJbSbvt72f7RFQy0lHLgFiaUmsGlbIa5nvjsdD5E3VfX/L0OJCX2/F1Bwr0JUuTfDg==", "username"=>"rakalicious", "fullname"=>"Kaustubh Rakesh", "email"=>"rakalicious2408@gmail.com", "password"=>"[FILTERED]", "confirm_password"=>"[FILTERED]", "commit"=>"signup"}
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 5, expected 1)):
+  
+app/helpers/users_helper.rb:6:in `check_if_empty'
+app/controllers/users_controller.rb:48:in `signup_entry'
+Started POST "/users/signup_entry" for 127.0.0.1 at 2019-01-30 23:20:55 +0530
+Processing by UsersController#signup_entry as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ul/ujJkfN7l5RIFarVIoEJbSbvt72f7RFQy0lHLgFiaUmsGlbIa5nvjsdD5E3VfX/L0OJCX2/F1Bwr0JUuTfDg==", "username"=>"rakalicious", "fullname"=>"Kaustubh Rakesh", "email"=>"rakalicious2408@gmail.com", "password"=>"[FILTERED]", "confirm_password"=>"[FILTERED]", "commit"=>"signup"}
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "rakalicious"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:21
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "rakalicious"], ["password", "202cb962ac59075b964b07152d234b70"], ["name", "Kaustubh Rakesh"], ["email", "rakalicious2408@gmail.com"], ["created_at", "2019-01-30 17:50:55.202048"], ["updated_at", "2019-01-30 17:50:55.202048"]]
+  ↳ app/models/user.rb:21
+  [1m[35m (41.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:21
+Redirected to http://0.0.0.0:3000/users/new_user
+Completed 302 Found in 71ms (ActiveRecord: 53.1ms)
+
+
+Started GET "/users/new_user" for 127.0.0.1 at 2019-01-30 23:20:55 +0530
+Processing by UsersController#new_user as HTML
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/users/login" for 127.0.0.1 at 2019-01-30 23:22:26 +0530
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sWF+YBJ7GJJYtJg6MBU12+2c6LH/V4L3aa7PSIkURyvQl2xMcDhMXvJVfGfC86/7uhZCqLIcfVxcQlrxu/+Hgw==", "username"=>"rakalicious", "password"=>"[FILTERED]", "commit"=>"Login"}
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "rakalicious"], ["password", "202cb962ac59075b964b07152d234b70"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 7ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 23:22:26 +0530
+Processing by UrlsController#new as HTML
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/urls/convert_long" for 127.0.0.1 at 2019-01-30 23:22:41 +0530
+Processing by UrlsController#convert_long as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QyFj0Lb31mK/EykoQ1J9oLzW2FLAURoXtNgEan8SBvKUH1vCzprHWVrvbFyYUc03sJ5W1I/5MCKKmXY9MSvxQg==", "long_url_inp"=>"www.youtube.com/charmander", "commit"=>"Long to Short"}
+  [1m[36mUrl Load (0.7ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."long_url" = $1 LIMIT $2[0m  [["long_url", "www.youtube.com/charmander"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:70
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 58ms (Views: 6.7ms | ActiveRecord: 5.8ms)
+
+
+  [1m[36mUrl Load (0.7ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/conversions/index" for 127.0.0.1 at 2019-01-30 23:28:58 +0530
+Processing by ConversionsController#index as HTML
+  Rendering conversions/index.html.erb within layouts/application
+  [1m[36mConversion Load (1.0ms)[0m  [1m[34mSELECT "conversions".* FROM "conversions"[0m
+  ↳ app/views/conversions/index.html.erb:9
+  Rendered conversions/index.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 44ms (Views: 14.5ms | ActiveRecord: 11.4ms)
+
+
+Started GET "/domains/new" for 127.0.0.1 at 2019-01-30 23:29:02 +0530
+Processing by DomainsController#new as HTML
+  Rendering domains/new.html.erb within layouts/application
+  Rendered domains/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 21ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 23:29:05 +0530
+Processing by UrlsController#new as HTML
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2019-01-30 23:29:06 +0530
+Processing by SearchController#search as HTML
+  Rendering search/search.html.erb within layouts/application
+  Rendered search/search.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 22ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&q=char" for 127.0.0.1 at 2019-01-30 23:29:10 +0530
+Processing by SearchController#search as HTML
+  Parameters: {"utf8"=>"✓", "q"=>"char"}
+  Rendering search/search.html.erb within layouts/application
+  [1m[36mUrl Load (2.0ms)[0m  [1m[34mSELECT "urls".* FROM "urls" WHERE "urls"."id" IN ($1, $2, $3, $4, $5, $6, $7, $8)[0m  [["id", 31], ["id", 17], ["id", 15], ["id", 16], ["id", 42], ["id", 37], ["id", 36], ["id", 35]]
+  ↳ app/views/search/search.html.erb:18
+  Rendered search/search.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 24ms (Views: 17.5ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-30 23:29:14 +0530
+Processing by UrlsController#new as HTML
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/urls/convert_long" for 127.0.0.1 at 2019-01-30 23:29:18 +0530
+Processing by UrlsController#convert_long as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m1egvDowGH1NlmXq0bbg2Ij24cHQT7IQBCypwSZzfGRMaZiuQl0JRqhqIJ4KtVBPhL5vR5/nmCU6bduWaEqL1A==", "long_url_inp"=>"", "commit"=>"Long to Short"}
+  [1m[36mUrl Load (0.6ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."long_url" = $1 LIMIT $2[0m  [["long_url", ""], ["LIMIT", 1]]
+  ↳ app/models/url.rb:70
+  [1m[36mDomain Load (0.7ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."domain_name" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/models/url.rb:85
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 3.6ms)
+
+
+  
+NoMethodError (undefined method `match' for nil:NilClass):
+  
+app/models/url.rb:89:in `find_short_domain'
+app/models/url.rb:74:in `shorten_url'
+app/controllers/urls_controller.rb:35:in `long_to_short'
+app/controllers/urls_controller.rb:24:in `convert_long'
+Started GET "/urls/logout" for 127.0.0.1 at 2019-01-30 23:29:28 +0530
+Processing by UrlsController#logout as HTML
+Redirected to http://0.0.0.0:3000/users/new_user
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new_user" for 127.0.0.1 at 2019-01-30 23:29:28 +0530
+Processing by UsersController#new_user as HTML
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (34.1ms)
+Completed 200 OK in 40ms (Views: 38.0ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUrl Load (1.0ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUrl Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "urls" LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUrl Load (0.6ms)[0m  [1m[34mSELECT "urls".* FROM "urls"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6581763620198407620)[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (20.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to DropUserTable (20190131044435)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (2.8ms)[0m  [1m[35mDROP TABLE "users"[0m
+  ↳ db/migrate/20190131044435_drop_user_table.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190131044435"]]
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (42.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to DropUrlTable (20190131044440)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.1ms)[0m  [1m[35mDROP TABLE "urls"[0m
+  ↳ db/migrate/20190131044440_drop_url_table.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190131044440"]]
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (75.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to DropConversionTable (20190131044451)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.3ms)[0m  [1m[35mDROP TABLE "conversions"[0m
+  ↳ db/migrate/20190131044451_drop_conversion_table.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190131044451"]]
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (42.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to DropDomainTable (20190131044504)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.2ms)[0m  [1m[35mDROP TABLE "domains"[0m
+  ↳ db/migrate/20190131044504_drop_domain_table.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190131044504"]]
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (140.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6581763620198407620)[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6581763620198407620)[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to CreateDomainTable (20190131044716)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (618.3ms)[0m  [1m[35mCREATE TABLE "domain_tables" ("id" bigserial primary key, "domain_name" character varying, "short_domain" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190131044716_create_domain_table.rb:3
+  [1m[35m (58.9ms)[0m  [1m[35mCREATE  INDEX  "index_domain_name_on_short_domain" ON "domain_name"  ("short_domain")[0m
+  ↳ db/migrate/20190131044716_create_domain_table.rb:8
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6581763620198407620)[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6581763620198407620)[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to CreateDomainTable (20190131044716)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (45.5ms)[0m  [1m[35mCREATE TABLE "domain_tables" ("id" bigserial primary key, "domain_name" character varying, "short_domain" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190131044716_create_domain_table.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190131044716"]]
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to CreateConversionTable (20190131044728)
+  [1m[35m (40.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "conversion_tables" ("id" bigserial primary key, "date" date, "count" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190131044728_create_conversion_table.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190131044728"]]
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to CreateUrlTable (20190131044734)
+  [1m[35m (40.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "url_tables" ("id" bigserial primary key, "long_url" text, "short_url" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190131044734_create_url_table.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190131044734"]]
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to CreateUserTable (20190131044743)
+  [1m[35m (40.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "user_tables" ("id" bigserial primary key, "username" character varying, "password" character varying, "name" character varying, "email" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190131044743_create_user_table.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190131044743"]]
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6581763620198407620)[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6581763620198407620)[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to AddIndexToUsers (20190131045609)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_username_on_email" ON "username"  ("email")[0m
+  ↳ db/migrate/20190131045609_add_index_to_users.rb:3
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6581763620198407620)[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Started GET "/users/signup" for 127.0.0.1 at 2019-01-31 10:29:20 +0530
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/rakesh/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.2) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/users/signup" for 127.0.0.1 at 2019-01-31 10:29:53 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/rakesh/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#signup as HTML
+  Rendering users/signup.html.erb within layouts/application
+  Rendered users/signup.html.erb within layouts/application (76.3ms)
+Completed 200 OK in 126ms (Views: 100.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/signup_entry" for 127.0.0.1 at 2019-01-31 10:30:08 +0530
+Processing by UsersController#signup_entry as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1zN8LmenSiZC+zHjDot6nzzsAkmd0WZ9bqn9ArhsvJkR9lMHkj7EAcNTxIfnBAVYVoNilsP+ZPE6Z/SfmGh1sQ==", "username"=>"raka", "fullname"=>"Kaustubh Rakesh", "email"=>"kaustubhrakeshzen@gmail.com", "password"=>"[FILTERED]", "confirm_password"=>"[FILTERED]", "commit"=>"signup"}
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 1.4ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedTable: ERROR:  relation "users" does not exist
+LINE 8:                WHERE a.attrelid = '"users"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod,
+                     c.collname, col_description(a.attrelid, a.attnum) AS comment
+                FROM pg_attribute a
+                LEFT JOIN pg_attrdef d ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+                LEFT JOIN pg_type t ON a.atttypid = t.oid
+                LEFT JOIN pg_collation c ON a.attcollation = c.oid AND a.attcollation <> t.typcollation
+               WHERE a.attrelid = '"users"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+):
+  
+app/models/user.rb:29:in `check_username_available'
+app/controllers/users_controller.rb:54:in `signup_entry'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6581763620198407620)[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to DropUserTable (20190131050238)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (2.7ms)[0m  [1m[35mDROP TABLE "user_tables"[0m
+  ↳ db/migrate/20190131050238_drop_user_table.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190131050238"]]
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (43.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to DropUrlTable (20190131050244)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.6ms)[0m  [1m[35mDROP TABLE "url_tables"[0m
+  ↳ db/migrate/20190131050244_drop_url_table.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190131050244"]]
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (42.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to DropConversionTable (20190131050253)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.2ms)[0m  [1m[35mDROP TABLE "conversion_tables"[0m
+  ↳ db/migrate/20190131050253_drop_conversion_table.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190131050253"]]
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (42.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to DropDomainTable (20190131050300)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.3ms)[0m  [1m[35mDROP TABLE "domain_tables"[0m
+  ↳ db/migrate/20190131050300_drop_domain_table.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190131050300"]]
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (42.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(6581763620198407620)[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6581763620198407620)[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to CreateDomain (20190131050605)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (69.5ms)[0m  [1m[35mCREATE TABLE "domains" ("id" bigserial primary key, "domain_name" character varying, "short_domain" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190131050605_create_domain.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190131050605"]]
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6581763620198407620)[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mDomain Load (18.7ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6581763620198407620)[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to CreateUrl (20190131050925)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (45.0ms)[0m  [1m[35mCREATE TABLE "urls" ("id" bigserial primary key, "long_url" text, "short_url" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190131050925_create_url.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190131050925"]]
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to CreateUser (20190131050930)
+  [1m[35m (41.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "password" character varying, "name" character varying, "email" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190131050930_create_user.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190131050930"]]
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to CreateConversion (20190131050937)
+  [1m[35m (41.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "conversions" ("id" bigserial primary key, "date" date, "count" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190131050937_create_conversion.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190131050937"]]
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(6581763620198407620)[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/rakesh/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUrl Load (10.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2019-01-31 10:46:31 +0530
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/rakesh/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#new_user as HTML
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 30ms (Views: 22.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/signup" for 127.0.0.1 at 2019-01-31 10:46:35 +0530
+Processing by UsersController#signup as HTML
+  Rendering users/signup.html.erb within layouts/application
+  Rendered users/signup.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 46ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/signup_entry" for 127.0.0.1 at 2019-01-31 10:46:43 +0530
+Processing by UsersController#signup_entry as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0PsODPYhkOuhJpKDOqvneiWvuFgp38p3BLcSMKmmO/gWPiElA7gezCCOZ+fTJJi9T8DYh3fwyPtQeRutiaLy0A==", "username"=>"raka", "fullname"=>"Kaustubh Rakesh", "email"=>"kaustubhrakeshzen@gmail.com", "password"=>"[FILTERED]", "confirm_password"=>"[FILTERED]", "commit"=>"signup"}
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "raka"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:29
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:21
+  [1m[36mUser Create (1.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "password", "name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["username", "raka"], ["password", "202cb962ac59075b964b07152d234b70"], ["name", "Kaustubh Rakesh"], ["email", "kaustubhrakeshzen@gmail.com"], ["created_at", "2019-01-31 05:16:43.873855"], ["updated_at", "2019-01-31 05:16:43.873855"]]
+  ↳ app/models/user.rb:21
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:21
+Redirected to http://0.0.0.0:3000/users/new_user
+Completed 302 Found in 91ms (ActiveRecord: 11.6ms)
+
+
+Started GET "/users/new_user" for 127.0.0.1 at 2019-01-31 10:46:43 +0530
+Processing by UsersController#new_user as HTML
+  Rendering users/new_user.html.erb within layouts/application
+  Rendered users/new_user.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mUrl Load (0.6ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/users/login" for 127.0.0.1 at 2019-01-31 10:46:59 +0530
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r0+9Lxqp4cHHjzK5lcOEZEuOBfEaqvsWcZoyRVCVcurOua8DeOq1DW1u1uRnJR5EHASv6FfhBL1Edqf8Yn6yQg==", "username"=>"raka", "password"=>"[FILTERED]", "commit"=>"Login"}
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+Unpermitted parameters: :utf8, :authenticity_token, :commit
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 AND "users"."password" = $2 LIMIT $3[0m  [["username", "raka"], ["password", "202cb962ac59075b964b07152d234b70"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:10
+Redirected to http://0.0.0.0:3000/urls/new
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-31 10:46:59 +0530
+Processing by UrlsController#new as HTML
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 28ms (Views: 7.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/domains/new" for 127.0.0.1 at 2019-01-31 10:47:02 +0530
+Processing by DomainsController#new as HTML
+  Rendering domains/new.html.erb within layouts/application
+  Rendered domains/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 21ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/domains/create_domain" for 127.0.0.1 at 2019-01-31 10:47:13 +0530
+Processing by DomainsController#create_domain as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lDZJ2Ca0iGmmyXQO6aMPrbdSVKlDmBjVjRSDqRRmZDh6AtCAsGjA1NwP8/TvMqUsH1IV9KEuYc56ji9P6TggOQ==", "domain_name"=>"www.google.com", "short_domain"=>"go.gl", "commit"=>"Create Domain"}
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `get_domain_name_from_url' for DomainsHelper:Module
+Did you mean?  get_domain_from_url):
+  
+app/models/domain.rb:7:in `new_domain_entry'
+app/controllers/domains_controller.rb:10:in `create_domain'
+Started POST "/domains/create_domain" for 127.0.0.1 at 2019-01-31 10:48:14 +0530
+Processing by DomainsController#create_domain as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lDZJ2Ca0iGmmyXQO6aMPrbdSVKlDmBjVjRSDqRRmZDh6AtCAsGjA1NwP8/TvMqUsH1IV9KEuYc56ji9P6TggOQ==", "domain_name"=>"www.google.com", "short_domain"=>"go.gl", "commit"=>"Create Domain"}
+  [1m[36mDomain Load (0.7ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."domain_name" = $1 LIMIT $2[0m  [["domain_name", "www"], ["LIMIT", 1]]
+  ↳ app/models/domain.rb:8
+  [1m[36mDomain Load (0.3ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."short_domain" = $1 LIMIT $2[0m  [["short_domain", "go.gl"], ["LIMIT", 1]]
+  ↳ app/models/domain.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/domain.rb:16
+  [1m[36mDomain Create (0.8ms)[0m  [1m[32mINSERT INTO "domains" ("domain_name", "short_domain", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["domain_name", "www"], ["short_domain", "go.gl"], ["created_at", "2019-01-31 05:18:14.725602"], ["updated_at", "2019-01-31 05:18:14.725602"]]
+  ↳ app/models/domain.rb:16
+  [1m[35m (39.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/domain.rb:16
+  Rendering domains/new.html.erb within layouts/application
+  Rendered domains/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 70ms (Views: 5.0ms | ActiveRecord: 46.8ms)
+
+
+  [1m[36mDomain Load (0.6ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mDomain Destroy (41.5ms)[0m  [1m[31mDELETE FROM "domains" WHERE "domains"."id" = $1[0m  [["id", 1]]
+  [1m[36mDomain Load (0.6ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/domains/create_domain" for 127.0.0.1 at 2019-01-31 10:49:09 +0530
+Processing by DomainsController#create_domain as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"N0eh/8PToKDXM8Pnlszwdsy8AZGQtICZsO/aWHmn6S/ZczinVQ/oHa31RB2QXVr3ZLxAzHIC+YJHdXa+hPmtLg==", "domain_name"=>"www.google.com", "short_domain"=>"go.gl", "commit"=>"Create Domain"}
+  [1m[36mDomain Load (0.3ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."domain_name" = $1 LIMIT $2[0m  [["domain_name", "google"], ["LIMIT", 1]]
+  ↳ app/models/domain.rb:8
+  [1m[36mDomain Load (0.3ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."short_domain" = $1 LIMIT $2[0m  [["short_domain", "go.gl"], ["LIMIT", 1]]
+  ↳ app/models/domain.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/domain.rb:16
+  [1m[36mDomain Create (0.5ms)[0m  [1m[32mINSERT INTO "domains" ("domain_name", "short_domain", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["domain_name", "google"], ["short_domain", "go.gl"], ["created_at", "2019-01-31 05:19:09.306827"], ["updated_at", "2019-01-31 05:19:09.306827"]]
+  ↳ app/models/domain.rb:16
+  [1m[35m (40.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/domain.rb:16
+  Rendering domains/new.html.erb within layouts/application
+  Rendered domains/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 67ms (Views: 7.6ms | ActiveRecord: 46.0ms)
+
+
+  [1m[36mDomain Load (0.8ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/urls/new" for 127.0.0.1 at 2019-01-31 10:49:27 +0530
+Processing by UrlsController#new as HTML
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/urls/convert_long" for 127.0.0.1 at 2019-01-31 10:49:35 +0530
+Processing by UrlsController#convert_long as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sRuxRA6sVN9AjSJlTSoX1qbqzCzVNe9S0BP+JIsHOY9mJYlWdsFF5KVxZxGWKadBqqJCqpqdxWfuUoxzxT7OPw==", "long_url_inp"=>"www.google.com/charmander", "commit"=>"Long to Short"}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `get_domain_from_url' for DomainsHelper:Module
+Did you mean?  get_domain_name_from_url):
+  
+app/controllers/urls_controller.rb:34:in `long_to_short'
+app/controllers/urls_controller.rb:24:in `convert_long'
+Started POST "/urls/convert_long" for 127.0.0.1 at 2019-01-31 10:49:58 +0530
+Processing by UrlsController#convert_long as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sRuxRA6sVN9AjSJlTSoX1qbqzCzVNe9S0BP+JIsHOY9mJYlWdsFF5KVxZxGWKadBqqJCqpqdxWfuUoxzxT7OPw==", "long_url_inp"=>"www.google.com/charmander", "commit"=>"Long to Short"}
+  [1m[36mUrl Load (0.5ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."long_url" = $1 LIMIT $2[0m  [["long_url", "www.google.com/charmander"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:70
+  [1m[36mDomain Load (0.3ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."domain_name" = $1 LIMIT $2[0m  [["domain_name", "google"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:71
+  [1m[36mCACHE Domain Load (0.0ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."domain_name" = $1 LIMIT $2[0m  [["domain_name", "google"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:86
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = $1 LIMIT $2[0m  [["short_url", "o2mp7Ia"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:58
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/url.rb:77
+  [1m[36mUrl Create (1.1ms)[0m  [1m[32mINSERT INTO "urls" ("long_url", "short_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["long_url", "www.google.com/charmander"], ["short_url", "o2mp7Ia"], ["created_at", "2019-01-31 05:19:58.279889"], ["updated_at", "2019-01-31 05:19:58.279889"]]
+  ↳ app/models/url.rb:77
+  [1m[35m (41.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/url.rb:77
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 1110ms (Views: 7.6ms | ActiveRecord: 51.5ms)
+
+
+  [1m[36mConversion Load (19.5ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-31"], ["LIMIT", 1]]
+  ↳ app/workers/counter_worker.rb:6
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/counter_worker.rb:8
+  [1m[36mConversion Create (1.3ms)[0m  [1m[32mINSERT INTO "conversions" ("date", "count", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["date", "2019-01-31"], ["count", 1], ["created_at", "2019-01-31 05:19:59.580354"], ["updated_at", "2019-01-31 05:19:59.580354"]]
+  ↳ app/workers/counter_worker.rb:8
+  [1m[35m (165.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/counter_worker.rb:8
+Started POST "/urls/convert_long" for 127.0.0.1 at 2019-01-31 10:50:18 +0530
+Processing by UrlsController#convert_long as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NeTFWS/nexBZigGtsq+60SPBgL0JZJjNAFcsB5baW2Li2v1LV4pqK7x2RNlprApGL4kOO0bMsvg+Fl5Q2OOs0g==", "long_url_inp"=>"www.google.com/charmeleon", "commit"=>"Long to Short"}
+  [1m[36mUrl Load (0.5ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."long_url" = $1 LIMIT $2[0m  [["long_url", "www.google.com/charmeleon"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:70
+  [1m[36mDomain Load (0.5ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."domain_name" = $1 LIMIT $2[0m  [["domain_name", "google"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:71
+  [1m[36mCACHE Domain Load (0.0ms)[0m  [1m[34mSELECT  "domains".* FROM "domains" WHERE "domains"."domain_name" = $1 LIMIT $2[0m  [["domain_name", "google"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:86
+  [1m[36mUrl Load (0.5ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = $1 LIMIT $2[0m  [["short_url", "qdM44Bg"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:58
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/url.rb:77
+  [1m[36mUrl Create (0.6ms)[0m  [1m[32mINSERT INTO "urls" ("long_url", "short_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["long_url", "www.google.com/charmeleon"], ["short_url", "qdM44Bg"], ["created_at", "2019-01-31 05:20:18.877624"], ["updated_at", "2019-01-31 05:20:18.877624"]]
+  ↳ app/models/url.rb:77
+  [1m[36mConversion Load (0.6ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-31"], ["LIMIT", 1]]
+  ↳ app/workers/counter_worker.rb:6
+  [1m[36mCACHE Conversion Load (0.0ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" WHERE "conversions"."date" = $1 LIMIT $2[0m  [["date", "2019-01-31"], ["LIMIT", 1]]
+  ↳ app/workers/counter_worker.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/workers/counter_worker.rb:12
+  [1m[36mConversion Update (0.8ms)[0m  [1m[33mUPDATE "conversions" SET "count" = $1, "updated_at" = $2 WHERE "conversions"."id" = $3[0m  [["count", 2], ["updated_at", "2019-01-31 05:20:18.886762"], ["id", 1]]
+  ↳ app/workers/counter_worker.rb:12
+  [1m[35m (40.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/url.rb:77
+  [1m[35m (36.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/workers/counter_worker.rb:12
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 79ms (Views: 8.1ms | ActiveRecord: 43.0ms)
+
+
+  [1m[36mUrl Load (0.6ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/urls/convert_short" for 127.0.0.1 at 2019-01-31 10:50:36 +0530
+Processing by UrlsController#convert_short as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MXaK9JkLNJcTZ0gVVuhTxzrwfmoiV0T34oqyxevyNwbqGNm8lAHUBGQSXHnRAKSPRumM5VCeyRAkKBW2TJw6lA==", "short_url_inp"=>"qdM44Bg", "commit"=>"Short to Long"}
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."short_url" = $1 LIMIT $2[0m  [["short_url", "qdM44Bg"], ["LIMIT", 1]]
+  ↳ app/models/url.rb:105
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 13ms (Views: 7.4ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mConversion Load (0.6ms)[0m  [1m[34mSELECT  "conversions".* FROM "conversions" LIMIT $1[0m  [["LIMIT", 11]]
