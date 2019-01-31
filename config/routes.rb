@@ -12,8 +12,6 @@ Rails.application.routes.draw do
   post 'users/username_available'
   post 'users/signup_entry'
   post 'users/login'
-  post 'urls/convert_long'
-  post 'urls/convert_short'
   post 'urls/long_to_short'
   post 'domains/create_domain'
 
