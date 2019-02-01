@@ -18,8 +18,8 @@ out = {"short_domain": "yt.ub",
     "short_url": "1R9ixp3"}
 =end
   def long_to_short
-    domain_name = DomainsHelper.get_domain_name_from_url(params[:long_url_inp])
-    @req_ans = Url.shorten_url(params[:long_url_inp] , domain_name)
+    domain_name = DomainsHelper.get_domain_name_from_url(url_params[:long_url_inp])
+    @req_ans = Url.shorten_url(url_params[:long_url_inp] , domain_name)
     respond_to do |format|
       if @req_ans == false
         @req_ans = ""
@@ -40,7 +40,7 @@ inp = GET  http://0.0.0.0:3000/urls/short_to_long?short_url_inp .... and in body
 out = {"long_url":"www.youtube.com/ninetails"}
 =end
   def short_to_long
-    short_inp = params[:short_url_inp]
+    short_inp = url_params[:short_url_inp]
     if short_inp.include? "/"
       short_inp = short_inp.split("/").second
     end
