@@ -21,8 +21,8 @@ generate nbit random string of length num
 close the session
 =end
   def close_session
-		session[:user] = "no"
-		redirect_to users_new_user_path
-	end
+    session[:user] = "no"
+    redirect_to users_new_user_path
+  end
   	
 end
