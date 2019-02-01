@@ -1,0 +1,47 @@
+
+  <h1>
+    <center>
+        SignUp<br><br>
+    </center>    
+  </h1>
+  <!-- <p>
+    <% if @a == 5 %>
+      <%= javascript_tag "alert('hello welcome')" %>
+    <% end %>
+  </p> -->
+  <!-- <%= form_with url: users_username_available_path do |form| %>
+
+  <%= form.submit 'Check_Available' %>
+  <%= form.label :username %><br><br>
+  <% end %> -->
+  <%= form_with url: users_signup_entry_path do |form| %>
+  <p>
+  	<center>
+      <%= form.label :username %>
+      <%= form.text_field :username %><br><br>
+
+  		<%= form.label :fullname %>
+    	<%= form.text_field :fullname %><br><br>
+
+    	<%= form.label :email %>
+    	<%= form.text_field :email %><br><br>
+
+    	<%= form.label :password %>
+    	<%= form.password_field :password %><br><br>
+
+      <%= form.label :confirm_password %>
+      <%= form.password_field :confirm_password %><br><br>
+
+    	<%= form.submit 'signup' %>
+
+      <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
+      <%= yield %>
+
+    </center>
+  </p>
+     
+  
+  <%= link_to 'back', users_new_user_path %>
+<% end %>

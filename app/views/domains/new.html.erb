@@ -1,0 +1,20 @@
+
+<%= link_to 'back', urls_new_path %>
+<br><br>
+  <p>
+    <center>
+      <%= form_with url: domains_create_domain_path do |form| %>
+      
+      <%= form.label :domain %>
+      <%= form.text_field :domain_name %>
+      <%= form.label :Short_domain %>
+      <%= form.text_field :short_domain %>
+      <%= form.submit 'Create Domain'%><br><br><br>
+      <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
+      <%= yield %>
+    
+    </center>
+  </p>
+<% end %>

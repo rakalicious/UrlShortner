@@ -1,0 +1,24 @@
+<h1>
+  Urls Search
+</h1>
+<p>
+  <%= link_to 'back', urls_new_path %>
+  <%= form_for search_path, method: :get do |f| %>
+  <h4>
+    input atleast 3 letters
+  </h4>
+  <%= f.label "Search for" %> 
+  <%= text_field_tag :q, params[:q] %>
+  <%= submit_tag "Go", name: nil %>
+  <% end %>
+</p>
+
+<ul>
+  <% @urls.each do |url| %>
+    <li>
+      <h3>
+        <%= link_to ( url.short_url + " : " + url.long_url), controller: "urls", action: "new"%>
+      </h3>
+    </li>
+  <% end %>
+</ul>

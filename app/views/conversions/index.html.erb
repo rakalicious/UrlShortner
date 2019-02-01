@@ -1,0 +1,16 @@
+<h1>
+  Report
+</h1>
+<p>
+  <%= link_to 'back', urls_new_path %>
+</p>
+
+<ul>
+  <% @conversion.each do |conv| %>
+    <li>
+      <h3>
+        <%= conv.date.to_s + " : " + conv.count.to_s %>
+      </h3>
+    </li>
+  <% end %>
+</ul>

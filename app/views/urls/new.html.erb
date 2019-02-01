@@ -1,0 +1,38 @@
+
+<center>
+  <%= link_to 'Logout', urls_logout_path %>
+  <br><br>
+  <%= link_to 'Report', conversions_index_path %>
+  <br><br>
+  <%= link_to 'Admin', domains_new_path %>
+  <br><br>
+  <%= link_to 'Search', search_path %><br><br>
+</center>
+<p> 
+  <center>
+    <%= form_with url: urls_long_to_short_path do |form| %>
+    <!--
+    <%= form.label :domain %>
+    <%= form.text_field :domain %>
+    -->
+    <%= form.label :full_url %>
+    <%= form.text_field :long_url_inp %>
+    <%= form.submit 'Long to Short'%><br><br>
+    <% end %>
+
+    <%= form_with url: urls_short_to_long_path ,method: :get  do |form| %>
+    <%= form.label :short_url %>
+    <%= form.text_field :short_url_inp %>
+    <%= form.submit 'Short to Long'%><br><br><br>
+
+    <% pika = @req_ans %>
+    <%= form.label :Output ,"#{pika}" %><br><br>
+
+    <% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>"><%= value %></div>
+    <% end %>
+    <%= yield %>
+    
+    </center>
+  </p>
+<% end %>
